@@ -1,13 +1,55 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Lib 2.0</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- with IE11 other modes than edge are deprecated -->
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title>Buble</title>
+
+        <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16.png">
+        <!-- adding favicons for chrome and android: will size down when needed -->
+        <link rel="manifest" href="manifest.json">
+        <!-- styles -->
+        <link rel="stylesheet" href="stylesheets/main.css">
+    </head>
 <body>
-    <p id="text">Hi</p>
+    <header id="top">
+        <section class="cell left">
+            <div class="logo">
+                <a href="#home">
+                    <img src="img/cloud-black.svg" alt="logo" />
+                </a>
+            </div>
+        </section>
+        <section class="cell center">
+            <nav class="topnav">
+                <ul class="topnav-list">
+                    <li class="li"><a href="#books">Books</a></li>
+                    <li class="li"><a href="#audio">Audio</a></li>
+                    <li class="li"><a href="#video">Video</a></li>
+                    <li class="li"><a href="#photo">Photo</a></li>
+                    <li class="li"><a href="#contacts">Contacts</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section class="cell right">
+            <div class="search">
+                <a href="#search">
+                    <img src="img/search-black.svg" alt="search">
+                </a>
+            </div>
+            <div class="login">
+                <a href="#login">
+                    <img src="img/user-black.svg" alt="login">
+                </a>
+            </div>
+        </section>
+    </header>
+
     <script src="scripts/main.js"></script>
 </body>
 </html>
