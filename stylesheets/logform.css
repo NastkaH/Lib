@@ -1,0 +1,111 @@
+/* HEADER */
+/* LOGFORM */
+/* MIXIN */
+.hide {
+  display: none;
+}
+.active {
+  background-color: rgba(156, 214, 158, 0.719);
+}
+.active a {
+  font-weight: 500;
+}
+/* .tab-content > div:last-child {
+    display: none;
+} */
+.enter {
+  background-color: #ffffff;
+  padding: 4rem;
+  max-width: 60rem;
+  margin: 0 auto;
+  border-radius: 0.2rem;
+  box-shadow: 0 4px 10px 4px rgba(204, 204, 204, 0.3);
+}
+.tab-list {
+  margin-bottom: 4rem;
+  background-color: #e6e6e6;
+}
+.tab-list .tab {
+  float: left;
+  width: 50%;
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+  text-align: center;
+  transition: 0.5s ease;
+  border-radius: 0.2rem;
+}
+.tab-list .tab a {
+  padding: 1.5rem;
+}
+.tab-list .tab:hover {
+  background: #d9d9d9;
+}
+.tab-list:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.top-row > .col-wrap {
+  float: left;
+  width: 48%;
+  margin-right: 4%;
+}
+.top-row > .col-wrap:last-child {
+  margin: 0;
+}
+.top-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.col-wrap {
+  position: relative;
+  margin-bottom: 4rem;
+}
+label {
+  color: rgba(0, 0, 0, 0.5);
+  transition: all 0.25s ease;
+  font-size: 2rem;
+}
+label .req {
+  margin: 0.2rem;
+  color: rgba(56, 135, 59, 0.719);
+}
+input {
+  font-size: 1.8rem;
+  letter-spacing: 0.05em;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem 0.8rem;
+  background: none;
+  border: 1px solid #e6e6e6;
+  border-radius: 0.2rem;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+input:focus {
+  border-color: rgba(156, 214, 158, 0.719);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+.button {
+  border-radius: 0.2rem;
+  padding: 1.5rem 0;
+  font-size: 2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: #e6e6e6;
+  transition: all 0.5s ease;
+}
+.button:hover,
+.button:focus {
+  background: #d9d9d9;
+}
+.button-block {
+  display: block;
+  width: 100%;
+}
+.forgot {
+  margin-top: -20px;
+  text-align: right;
+}

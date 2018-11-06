@@ -1,0 +1,65 @@
+/* HEADER */
+/* LOGFORM */
+/* MIXIN */
+.hide {
+  display: none;
+}
+.active {
+  background-color: rgba(156, 214, 158, 0.719);
+}
+.active a {
+  font-weight: 500;
+}
+.main-header {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 5.4rem;
+  margin: 0.5rem 0 1rem;
+  padding: 0 3.2rem;
+}
+.topnav {
+  padding: 1.1rem 0;
+  margin: 0 2.7rem;
+}
+.topnav-li {
+  float: left;
+  background-color: #e6e6e6;
+  border-radius: 0.2rem;
+  margin: 0 0.2rem;
+  transition: 0.5s ease;
+}
+.topnav-li a {
+  padding: 0.55rem 1.65rem;
+}
+.topnav-li:hover {
+  background-color: #d9d9d9;
+}
+.logo-ico {
+  border-radius: 50%;
+  transition: 0.5s ease;
+}
+.logo-ico a {
+  height: 5.4rem;
+  padding: 1.1rem;
+}
+.logo-ico a > img {
+  height: 3.2rem;
+}
+.other-ico {
+  float: left;
+  border-radius: 50%;
+  transition: 0.5s ease;
+}
+.other-ico a {
+  height: 5.4rem;
+  padding: 1.7rem;
+}
+.other-ico a > img {
+  height: 2rem;
+}
+.logo-ico:hover,
+.other-ico:hover {
+  background-color: #e6e6e6;
+}

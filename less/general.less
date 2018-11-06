@@ -1,4 +1,4 @@
-/* @import 'variables/variables.less'; */
+@import 'variables.less';
 
 * {
     box-sizing: border-box;
@@ -8,16 +8,29 @@ html, body {
     height: 100%;
 }
 
-/* html {
+html {
     font-size: @html-fsize;
 }
 
 body {
     direction: ltr;
-    font: @body-fsize @font-style;
-} */
+    font: @body-fsize @font-fam;
+}
+
+main {
+    position: relative;
+    top: @header-hgt + @indent * 2 + 0.5;
+    height: calc(100% - (@header-hgt + @indent * 2 + 0.5));
+    padding: @indent * 3 0;
+    overflow: auto;
+}
 
 a {
     display: block;
+    color: @black;
+    cursor: pointer;
+}
+
+button {
     cursor: pointer;
 }

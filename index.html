@@ -17,38 +17,99 @@
         <link rel="stylesheet" href="stylesheets/main.css">
     </head>
 <body>
-    <header id="top">
-        <section class="cell left">
-            <div class="logo">
-                <a href="#home">
-                    <img src="img/cloud-black.svg" alt="logo" />
+    <header id="top" class="main-header">
+        <div id="defaultNav" class="logo-ico ni active">
+            <a href="#home">
+                <img src="img/cloud-computing.svg" alt="logo" />
+            </a>
+        </div>
+
+        <nav class="topnav">
+            <ul class="topnav-list">
+                <li class="topnav-li ni"><a href="#books">Books</a></li>
+                <li class="topnav-li ni"><a href="#audio">Audio</a></li>
+                <li class="topnav-li ni"><a href="#video">Video</a></li>
+                <li class="topnav-li ni"><a href="#photo">Photo</a></li>
+                <li class="topnav-li ni"><a href="#contacts">Contacts</a></li>
+            </ul>
+        </nav>
+
+        <section class="right">
+            <div class="other-ico ni">
+                <a href="#logform">
+                    <img src="img/user-black.svg" alt="login" />
                 </a>
             </div>
-        </section>
-        <section class="cell center">
-            <nav class="topnav">
-                <ul class="topnav-list">
-                    <li class="li"><a href="#books">Books</a></li>
-                    <li class="li"><a href="#audio">Audio</a></li>
-                    <li class="li"><a href="#video">Video</a></li>
-                    <li class="li"><a href="#photo">Photo</a></li>
-                    <li class="li"><a href="#contacts">Contacts</a></li>
-                </ul>
-            </nav>
-        </section>
-        <section class="cell right">
-            <div class="search">
+            <div class="other-ico ni">
                 <a href="#search">
-                    <img src="img/search-black.svg" alt="search">
-                </a>
-            </div>
-            <div class="login">
-                <a href="#login">
-                    <img src="img/user-black.svg" alt="login">
+                    <img src="img/magnifying-glass.svg" alt="search" />
                 </a>
             </div>
         </section>
     </header>
+
+    <main>
+        <section id="logform" class="enter hide">
+            <ul class="tab-list">
+                <li id="defaultTab" class="tab active"><a href="#signup" data-id="signup">Sign Up</a></li>
+                <li class="tab"><a href="#login" data-id="login">Log In</a></li>
+            </ul>
+            <!-- <div class="tab-content"> -->
+                <div id="signup" class="tab-content">
+                    <form action="/" method="post">
+                        <div class="top-row">
+                            <div class="col-wrap">
+                                <label>
+                                    First Name<span class="req">*</span>
+                                </label>
+                                <input type="text" required autocomplete="off" spellcheck="false" />
+                            </div>
+                            <div class="col-wrap">
+                                <label>
+                                    Last Name<span class="req">*</span>
+                                </label>
+                                <input type="text"required autocomplete="off" spellcheck="false" />
+                            </div>
+                        </div>
+                        <div class="col-wrap">
+                            <label>
+                                Email Address<span class="req">*</span>
+                            </label>
+                            <input type="email" required autocomplete="off" spellcheck="false" />
+                        </div>
+                        <div class="col-wrap">
+                            <label>
+                                Set A Password<span class="req">*</span>
+                            </label>
+                            <input type="password" required autocomplete="off" spellcheck="false" />
+                        </div>
+                        <button type="submit" class="button button-block">Submit</button>
+                    </form>
+                </div>
+                <div id="login" class="tab-content">
+                    <form action="/" method="post">
+                        <div class="col-wrap">
+                            <label>
+                                Email Address<span class="req">*</span>
+                            </label>
+                            <input type="email" required autocomplete="off" spellcheck="false" />
+                        </div>
+                        <div class="col-wrap">
+                            <label>
+                                Password<span class="req">*</span>
+                            </label>
+                            <input type="password" required autocomplete="off" spellcheck="false" />
+                        </div>
+                        <p class="forgot"><a href="#">Forgot Password?</a></p>
+                        <button class="button button-block">Log In</button>
+                    </form>
+                </div>
+            <!-- </div> -->
+        </section>
+        <section class="container">
+            
+        </section>
+    </main>
 
     <script src="scripts/main.js"></script>
 </body>

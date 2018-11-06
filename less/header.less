@@ -1,0 +1,45 @@
+@import "variables.less";
+
+.main-header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: @header-hgt;
+    margin: @indent 0 @indent * 2;
+    padding: 0 @header-pdng;
+}
+
+.topnav {
+    padding: @around-link 0;
+    margin: 0 @topnav-mrg;
+}
+
+.topnav-li {
+    .left();
+    background-color: @item-bg;
+    border-radius: @unit;
+    margin: 0 @unit;
+    transition:.5s ease;
+
+    a {
+        padding: @navli-pdng;
+    }
+
+    &:hover {
+        background-color: @hover-color;
+    }
+}
+
+.logo-ico {
+    .ico-holder(@logo-hgt);
+}
+
+.other-ico {
+    .left();
+    .ico-holder(@ico-hgt);
+}
+
+.logo-ico:hover, .other-ico:hover {
+    background-color: @item-bg;
+}

@@ -1,0 +1,41 @@
+/* HEADER */
+/* LOGFORM */
+/* MIXIN */
+.hide {
+  display: none;
+}
+.active {
+  background-color: rgba(156, 214, 158, 0.719);
+}
+.active a {
+  font-weight: 500;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  direction: ltr;
+  font: 1.6rem 'Segoe UI', Arial, sans-serif;
+}
+main {
+  position: relative;
+  top: 6.9rem;
+  height: calc(100% - (5.4rem + 0.5rem * 2 + 0.5));
+  padding: 1.5rem 0;
+  overflow: auto;
+}
+a {
+  display: block;
+  color: #000000;
+  cursor: pointer;
+}
+button {
+  cursor: pointer;
+}

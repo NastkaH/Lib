@@ -1,0 +1,120 @@
+@import "variables.less";
+
+/* .tab-content > div:last-child {
+    display: none;
+} */
+
+.enter {
+    background-color: @white;
+    padding: @form-indent;
+    max-width: @form-width;
+    margin: 0 auto;
+    border-radius: @unit;
+    box-shadow: 0 4px 10px 4px rgba(darken(@item-bg, 10%), .3);
+}
+
+.tab-list {
+    margin-bottom: @form-indent;
+    background-color: @item-bg;
+
+    .tab {
+        float: left;
+        width: 50%;
+        font-size: @body-fsize + 0.4;
+        letter-spacing: .1em;
+        text-align: center;
+        transition: .5s ease;
+        border-radius: @unit;
+
+        a {
+            padding: @indent * 3;
+        }
+
+        &:hover {
+            background: @hover-color;
+        }
+    }
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.top-row {
+    > .col-wrap {
+        float: left;
+        width: 48%;
+        margin-right: 4%;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.col-wrap {
+    position: relative;
+    margin-bottom: @form-indent;
+}
+
+label {
+    color: rgba(@black, .5);
+    transition: all 0.25s ease;
+    font-size: @body-fsize + 0.4;
+
+    .req {
+        margin: @unit;
+        color: darken(@active-color, 35%);
+    }
+}
+
+input {
+    font-size: @body-fsize + 0.2;
+    letter-spacing: .05em;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem 0.8rem;
+    background: none;
+    border: 1px solid @item-bg;
+    border-radius: @unit;
+    transition: border-color .25s ease, box-shadow .25s ease;
+
+    &:focus {
+        border-color: @active-color;
+        box-shadow: @shadow;
+    }
+}
+
+.button {
+    border-radius: @unit;
+    padding: @indent * 3 0;
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    background: @item-bg;
+    transition: all .5s ease;
+
+    &:hover, &:focus {
+        background: @hover-color;
+    }
+}
+
+.button-block {
+    display: block;
+    width: 100%;
+}
+
+.forgot {
+    margin-top: -20px;
+    text-align: right;
+}
