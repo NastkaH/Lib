@@ -9,25 +9,29 @@
 
     &-ls {
         &-hd {
-            color: #5f6368;
-            letter-spacing: .07em;
-            font-family: "Roboto", Arial, sans-serif;
-            font-size: .6875rem;
-            font-weight: 500;
-            line-height: 1rem;
+            color: @aside-hd;
+            font-family: @aux-f-fam;
+            font-size: @aside-hd-fs;
+            letter-spacing: @l-space;
             text-transform: uppercase;
-            padding: 15px 24px 10px;
+            padding: @2indent + 0.5 @aside-pdng @2indent;
         }
 
         &-it {
-            padding: 4px 0;
-            padding-left: 24px;
-            display: flex;
+            padding: @indent 0;
+            padding-left: @aside-pdng;
         }
 
         &-ln {
-            width: 176px;
-            line-height: 40px;
+            display: inline-flex;
+            align-items: center;
+            width: 100%;
+            height: @hgt-indent;
+            white-space: wrap;
+        }
+
+        &:not(:last-child) {
+            border-bottom: @brd;
         }
     }
 
@@ -36,46 +40,31 @@
     }
 }
 
-.sb-ls:not(:last-child) {
-    border-bottom: 1px solid #ddd;
-}
+/* .sb-ls-ln  span {
+    padding: calc((@hgt-indent - @link-hgt) / 2) 0;
+} */
 
-.topnav {
-    padding: @around-link 0;
-    margin: 0 @topnav-mrg;
-}
-
-.topnav-li {
-    background-color: @item-bg;
-    border-radius: @unit;
-    margin: 0 @unit;
-    transition:.5s ease;
-
-    a {
-        display: flex;
-        align-items: center;
-        padding: @navli-pdng;
-    }
-
-    &:hover {
-        .hover();
-    }
+.nav-ico {
+    height: @link-hgt;
+    /* padding: calc((@hgt-indent - @link-hgt) / 2) 0; */
+    padding-right: @2indent;
 }
 
 .mn-ft {
-    margin: 12px 15px 12px 24px;
+    margin: 24px 15px 24px 24px;
 }
 
 .mn-ft-ln {
+    display: inline-block;
     color: rgba(0,0,0,.54);
     padding: 2px 5px;
     white-space: nowrap;
 }
 
 @media only screen and (max-width : 768px)/*  and (max-width : 1024px) */ {
-    /* .sb {
+    .sb {
         display: none;
-    } */
+    }
 
     .container {
         margin: auto;

@@ -1,7 +1,9 @@
 @html-fsize: 62.5%;
 @body-fsize: 1.6rem;
+@link-hgt: 2.1rem;
 
 @font-fam: 'Segoe UI', Arial, sans-serif;
+@aux-f-fam: 'Roboto', Arial, sans-serif;
 
 @l-space: .07em;
 
@@ -12,41 +14,49 @@
 @active-color: rgba(156, 214, 158, 0.719);
 @border-color: #e3e3e3;
 
+
 @unit: 0.2rem;
 @indent: 0.5rem;
+@2indent: @indent * 2;
+@hgt-indent: 4rem;
 
 @shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
-
+@brd: 1px solid #ddd;
 
 /* HEADER */
 
 @header-hgt: 5.4rem;
-@navlivk-hgt: 2.1rem;
 @logo-hgt: @body-fsize * 2;
 @ico-hgt: @body-fsize + 0.4rem;
 
-@header-mrg: @indent * 2;
+@header-mrg: @2indent;
 @topnav-mrg: @header-hgt / 2;
 
-@header-pdng: @body-fsize * 2;
-@navli-pdng: @around-link / 2 (@header-hgt - @navlivk-hgt) / 2;
-
-@around-link: @logo-hgt - @navlivk-hgt;
+@header-pdng: @2indent;
+@ico-padding: calc((@header-hgt - @logo-hgt) / 2);
+@sch-pdng: (@logo-hgt - @body-fsize) / 2;
 
 @top-indent: @header-hgt + @header-mrg * 2;
 
 @main-height: calc(100% - @top-indent);
 
+@sch-form-wd: 72rem;
+@input-wd: calc(50vw - @btn-wd * 2);
+@btn-wd: 4.2rem;
+
 
 /* ASIDE */
 
+@aside-pdng: calc(@header-pdng + ((@header-hgt - @ico-hgt) / 2));
+@aside-hd-fs: @body-fsize - .5;
+@aside-hd: lighten(@black, 35%);
 
 @sb-width: 28rem;
 
 
 /* LOGFORM */
 
-@form-indent: 4rem;
+@hgt-indent: 4rem;
 
 @form-width: 60rem;
 
@@ -87,9 +97,24 @@
 
     a {
         height: @header-hgt;
-        padding: (@header-hgt - @img-hgt) / 2;
+        padding: calc((@header-hgt - @img-hgt) / 2);
         & > img {
             height: @img-hgt;
         }
     }
+}
+
+.background(@color, @img, @position, @size, @repeat) {
+    background-color: @color;
+    background-image: @img;
+    background-position: @position;
+    background-size: @size;
+    background-repeat: @repeat;
+}
+
+.sch-button(@img) {
+    height: @logo-hgt;
+    width: @btn-wd;
+    padding: @sch-pdng;
+    .background(transparent, @img, center, @body-fsize, no-repeat);
 }
