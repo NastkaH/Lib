@@ -1,0 +1,52 @@
+/* HEADER */
+/* ASIDE */
+/* LOGFORM */
+/* MIXIN */
+.hide {
+  display: none;
+}
+.active {
+  background-color: rgba(156, 214, 158, 0.719);
+}
+.active a {
+  font-weight: 500;
+}
+.container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.file-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 200px;
+  margin: 0 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+  border-radius: 0.2rem;
+}
+/* .video-wrap {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+} */
+.info-wrap {
+  display: flex;
+  align-items: center;
+  align-self: bottom;
+  justify-content: center;
+  padding: 10px 20px;
+}
+.info-wrap a {
+  text-align: center;
+}
+.video-play {
+  display: block;
+  height: auto;
+  width: 100%;
+  border-radius: 0.2rem;
+}

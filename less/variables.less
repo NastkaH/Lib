@@ -3,11 +3,12 @@
 
 @font-fam: 'Segoe UI', Arial, sans-serif;
 
+@l-space: .07em;
 
 @white: rgb(255, 255, 255);
 @black: rgb(0, 0, 0);
 @item-bg: darken(@white, 10%);
-@hover-color: darken(@item-bg, 5%);
+@hover-color: darken(@active-color, 10%);
 @active-color: rgba(156, 214, 158, 0.719);
 @border-color: #e3e3e3;
 
@@ -24,6 +25,7 @@
 @logo-hgt: @body-fsize * 2;
 @ico-hgt: @body-fsize + 0.4rem;
 
+@header-mrg: @indent * 2;
 @topnav-mrg: @header-hgt / 2;
 
 @header-pdng: @body-fsize * 2;
@@ -31,6 +33,15 @@
 
 @around-link: @logo-hgt - @navlivk-hgt;
 
+@top-indent: @header-hgt + @header-mrg * 2;
+
+@main-height: calc(100% - @top-indent);
+
+
+/* ASIDE */
+
+
+@sb-width: 28rem;
 
 
 /* LOGFORM */
@@ -40,11 +51,14 @@
 @form-width: 60rem;
 
 
-
 /* MIXIN */
 
 .hide {
     display: none;
+}
+
+.hover() {
+    background-color: @hover-color;
 }
 
 .active {
@@ -60,6 +74,11 @@
 
 .right() {
     float: right;
+}
+
+.fixed-top() {
+    top: @top-indent;
+    height: @main-height;
 }
 
 .ico-holder(@img-hgt) {

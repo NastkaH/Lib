@@ -1,4 +1,5 @@
 /* HEADER */
+/* ASIDE */
 /* LOGFORM */
 /* MIXIN */
 .hide {
@@ -10,16 +11,13 @@
 .active a {
   font-weight: 500;
 }
-/* .tab-content > div:last-child {
-    display: none;
-} */
 .enter {
   background-color: #ffffff;
   padding: 4rem;
   max-width: 60rem;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   border-radius: 0.2rem;
-  box-shadow: 0 4px 10px 4px rgba(204, 204, 204, 0.3);
+  /* box-shadow: 0 4px 10px 4px rgba(darken(@item-bg, 10%), .3); */
 }
 .tab-list {
   margin-bottom: 4rem;
@@ -38,7 +36,7 @@
   padding: 1.5rem;
 }
 .tab-list .tab:hover {
-  background: #d9d9d9;
+  background: rgba(120, 199, 123, 0.719);
 }
 .tab-list:after {
   content: "";
@@ -99,7 +97,7 @@ input:focus {
 }
 .button:hover,
 .button:focus {
-  background: #d9d9d9;
+  background: rgba(120, 199, 123, 0.719);
 }
 .button-block {
   display: block;

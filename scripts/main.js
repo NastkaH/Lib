@@ -1,4 +1,24 @@
+const booksURL = 'http://localhost:3000/authors';
+const audioURL = 'http://localhost:3000/audio';
+const videoURL = 'http://localhost:3000/video';
+const photoURL = 'http://localhost:3000/photo';
 
+
+
+
+function createItem() {
+    let el = addElement('div', {id: `${book.id}`, class: 'book-wrap'},
+        addElement('div', {class: 'img-wrap'},
+            addElement('a', {href: '#'},
+                addElement('img', {src: `${book.cover}`, alt: `${book.name}`, class: 'book-cover'})
+            )
+        ),
+        addElement('div', {class: 'info-wrap'},
+            addElement('a', {href: '#'},
+                /* addElement('span', {}, */ `${book.name}`)/* ) */
+        )
+    );
+}
 
 
 

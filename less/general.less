@@ -19,10 +19,14 @@ body {
 
 main {
     position: relative;
-    top: @header-hgt + @indent * 2 + 0.5;
-    height: calc(100% - (@header-hgt + @indent * 2 + 0.5));
-    padding: @indent * 3 0;
+    .fixed-top();
     overflow: auto;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-left: @sb-width;
 }
 
 a {

@@ -1,2 +1,13 @@
 /* HEADER */
+/* ASIDE */
+/* LOGFORM */
 /* MIXIN */
+.hide {
+  display: none;
+}
+.active {
+  background-color: rgba(156, 214, 158, 0.719);
+}
+.active a {
+  font-weight: 500;
+}

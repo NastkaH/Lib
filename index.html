@@ -16,101 +16,159 @@
         <!-- styles -->
         <link rel="stylesheet" href="stylesheets/main.css">
     </head>
-<body>
-    <header id="top" class="main-header">
-        <div id="defaultNav" class="logo-ico ni active">
-            <a href="#home">
-                <img src="img/cloud-computing.svg" alt="logo" />
-            </a>
-        </div>
-
-        <nav class="topnav">
-            <ul class="topnav-list">
-                <li class="topnav-li ni"><a href="#books">Books</a></li>
-                <li class="topnav-li ni"><a href="#audio">Audio</a></li>
-                <li class="topnav-li ni"><a href="#video">Video</a></li>
-                <li class="topnav-li ni"><a href="#photo">Photo</a></li>
-                <li class="topnav-li ni"><a href="#contacts">Contacts</a></li>
-            </ul>
-        </nav>
-
-        <section class="right">
-            <div class="other-ico ni">
+    <body>
+        <header id="top" class="mn-hd">
+            <div id="burger" class="other-ico">
+                <a href="#menu">
+                    <img src="img/menu.svg" alt="menu" />
+                </a>
+            </div>
+            <div id="defaultNav" class="logo-ico">
+                <a href="#home">
+                    <img src="img/cloud-computing.svg" alt="logo" />
+                </a>
+            </div>
+            <div class="mn-hd-sch">
+                <form action="#" method="POST" name="searchForm" role="search">
+                    <div class="sch">
+                        <button class="sch-sbmt" type="submit" name="searchSubmit" value="Search"></button>
+                        <input class="sch-input" type="text" name="searchInput" maxlength="2048" title="Search" autocomplete="off" spellcheck="false">
+                        <button class="sch-rst" type="reset" name="searchReset" value="Clear"></button>
+                    </div>
+                </form>
+            </div>
+            <div class="other-ico">
+                <a href="upload">
+                    <img src="img/cloud-upload.svg" alt="search" />
+                </a>
+            </div>
+            <div class="other-ico">
                 <a href="#logform">
                     <img src="img/user-black.svg" alt="login" />
                 </a>
             </div>
-            <div class="other-ico ni">
-                <a href="#search">
-                    <img src="img/magnifying-glass.svg" alt="search" />
-                </a>
-            </div>
-        </section>
-    </header>
+        </header>
 
-    <main>
-        <section id="logform" class="enter hide">
-            <ul class="tab-list">
-                <li id="defaultTab" class="tab active"><a href="#signup" data-id="signup">Sign Up</a></li>
-                <li class="tab"><a href="#login" data-id="login">Log In</a></li>
-            </ul>
-            <!-- <div class="tab-content"> -->
-                <div id="signup" class="tab-content">
-                    <form action="/" method="post">
-                        <div class="top-row">
-                            <div class="col-wrap">
-                                <label>
-                                    First Name<span class="req">*</span>
-                                </label>
-                                <input type="text" required autocomplete="off" spellcheck="false" />
-                            </div>
-                            <div class="col-wrap">
-                                <label>
-                                    Last Name<span class="req">*</span>
-                                </label>
-                                <input type="text"required autocomplete="off" spellcheck="false" />
-                            </div>
+        <main>
+            <aside class="sb">
+                <nav class="sb-ls">
+                    <ul>
+                        <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#books">
+                            <img class="nav-ico" src="img/cloud-book.svg" alt="book">
+                            <span>Books</span>
+                        </a></li>
+                        <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#audio">
+                                <img class="nav-ico" src="img/cloud-music.svg" alt="audio">
+                                <span>Audio</span>
+                        </a></li>
+                        <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#video">
+                                <img class="nav-ico" src="img/cloud-img.svg" alt="photo">
+                                <span>Video</span>
+                        </a></li>
+                        <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#photo">
+                                <img class="nav-ico" src="img/cloud-img.svg" alt="photo">
+                                <span>Photo</span>
+                        </a></li>
+                    </ul>
+                </nav>
+                <ul class="sb-ls">
+                    <div class="sb-ls-hd">Genre</div>
+                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">Fiction</a></li>
+                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">Tragicomedy</a></li>
+                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">Fantasy Fiction</a></li>
+                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">Drama</a></li>
+                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">Young Adult</a></li>
+                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">Mystery</a></li>
+                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">Thriller</a></li>
+                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">Epic Fantasy</a></li>
+                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">Utopia</a></li>
+                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">Dystopia</a></li>
+                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">Post-Apocalyptic</a></li>
+                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">Horror</a></li>
+                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">Short Story</a></li>
+                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">Speculative Fiction</a></li>
+                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">Novel</a></li>
+                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">Domestic Fiction</a></li>
+                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">Historical Fiction</a></li>
+                </ul>
+                <ul class="sb-ls">
+                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">Info</a></li>
+                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
+                        <img class="nav-ico" src="img/worldwide.svg" alt="contact">
+                        <span>Contact</span>
+                    </a></li>
+                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">Send response</a></li>
+                </ul>
+                <footer class="mn-ft">
+                    <a href="" class="mn-ft-ln">Confidentiality</a>
+                    <a href="" class="mn-ft-ln">Terms</a>
+                </footer>
+            </aside>
+            <section class="container" data-insert-target="generate">
+                <!-- <section id="logform" class="enter"> -->
+                    <!-- <ul class="tab-list">
+                        <li id="defaultTab" class="tab active"><a href="#signup" data-id="signup">Sign Up</a></li>
+                        <li class="tab"><a href="#login" data-id="login">Log In</a></li>
+                    </ul> -->
+                    <!-- <div class="tab-content"> -->
+                        <!-- <div id="signup" class="tab-content">
+                            <form action="/" method="post">
+                                <div class="top-row">
+                                    <div class="col-wrap">
+                                        <label>
+                                            First Name<span class="req">*</span>
+                                        </label>
+                                        <input type="text" required autocomplete="off" spellcheck="false" />
+                                    </div>
+                                    <div class="col-wrap">
+                                        <label>
+                                            Last Name<span class="req">*</span>
+                                        </label>
+                                        <input type="text"required autocomplete="off" spellcheck="false" />
+                                    </div>
+                                </div>
+                                <div class="col-wrap">
+                                    <label>
+                                        Email Address<span class="req">*</span>
+                                    </label>
+                                    <input type="email" required autocomplete="off" spellcheck="false" />
+                                </div>
+                                <div class="col-wrap">
+                                    <label>
+                                        Set A Password<span class="req">*</span>
+                                    </label>
+                                    <input type="password" required autocomplete="off" spellcheck="false" />
+                                </div>
+                                <button type="submit" class="button button-block">Submit</button>
+                            </form>
                         </div>
-                        <div class="col-wrap">
-                            <label>
-                                Email Address<span class="req">*</span>
-                            </label>
-                            <input type="email" required autocomplete="off" spellcheck="false" />
-                        </div>
-                        <div class="col-wrap">
-                            <label>
-                                Set A Password<span class="req">*</span>
-                            </label>
-                            <input type="password" required autocomplete="off" spellcheck="false" />
-                        </div>
-                        <button type="submit" class="button button-block">Submit</button>
-                    </form>
-                </div>
-                <div id="login" class="tab-content">
-                    <form action="/" method="post">
-                        <div class="col-wrap">
-                            <label>
-                                Email Address<span class="req">*</span>
-                            </label>
-                            <input type="email" required autocomplete="off" spellcheck="false" />
-                        </div>
-                        <div class="col-wrap">
-                            <label>
-                                Password<span class="req">*</span>
-                            </label>
-                            <input type="password" required autocomplete="off" spellcheck="false" />
-                        </div>
-                        <p class="forgot"><a href="#">Forgot Password?</a></p>
-                        <button class="button button-block">Log In</button>
-                    </form>
-                </div>
-            <!-- </div> -->
-        </section>
-        <section class="container">
-            
-        </section>
-    </main>
+                        <div id="login" class="tab-content">
+                            <form action="/" method="post">
+                                <div class="col-wrap">
+                                    <label>
+                                        Email Address<span class="req">*</span>
+                                    </label>
+                                    <input type="email" required autocomplete="off" spellcheck="false" />
+                                </div>
+                                <div class="col-wrap">
+                                    <label>
+                                        Password<span class="req">*</span>
+                                    </label>
+                                    <input type="password" required autocomplete="off" spellcheck="false" />
+                                </div>
+                                <p class="forgot"><a href="#">Forgot Password?</a></p>
+                                <button class="button button-block">Log In</button>
+                            </form>
+                        </div> -->
+                    <!-- </div> -->
+                <!-- </section> -->
+            </section>
+        </main>
 
-    <script src="scripts/main.js"></script>
-</body>
+    <!--    <script src="scripts/main.js"></script> -->
+        <!-- <script src="scripts/books.js"></script> -->
+        <!-- <script src="scripts/video.js"></script> -->
+        <!-- <script src="scripts/audio.js"></script> -->
+        <!-- <script src="scripts/photo.js"></script> -->
+    </body>
 </html>

@@ -1,4 +1,5 @@
 /* HEADER */
+/* ASIDE */
 /* LOGFORM */
 /* MIXIN */
 .hide {
@@ -26,10 +27,14 @@ body {
 }
 main {
   position: relative;
-  top: 6.9rem;
-  height: calc(100% - (5.4rem + 0.5rem * 2 + 0.5));
-  padding: 1.5rem 0;
+  top: 7.4rem;
+  height: calc(100% - 7.4rem);
   overflow: auto;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  margin-left: 28rem;
 }
 a {
   display: block;
