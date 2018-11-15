@@ -6,6 +6,12 @@
     .fixed-top();
     width: @sb-width;
     overflow: hidden;
+    background-color: @white;
+
+    z-index: 1; /* will always stay on top */
+    visibility: visible;
+    transform: translateX(0);
+    transition: transform .25s cubic-bezier(0.4,0.0,0.2,1), visibility 0s linear 0s;
 
     &-ls {
         &-hd {
@@ -20,6 +26,12 @@
         &-it {
             padding: @indent 0;
             padding-left: @aside-pdng;
+            transition: .25s ease;
+            border-radius: 0 50px 50px 0;
+
+            &:hover {
+                .hover();
+            }
         }
 
         &-ln {
@@ -62,11 +74,4 @@
 }
 
 @media only screen and (max-width : 768px)/*  and (max-width : 1024px) */ {
-    .sb {
-        display: none;
-    }
-
-    .container {
-        margin: auto;
-    }
 }

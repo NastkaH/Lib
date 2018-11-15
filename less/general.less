@@ -20,13 +20,24 @@ body {
 main {
     position: relative;
     .fixed-top();
+    padding-top: 0.1rem;
     overflow: auto;
 }
 
 .container {
-    display: flex;
-    justify-content: center;
     margin-left: @sb-width;
+    transition: margin-left .25s cubic-bezier(0.4,0.0,0.2,1);
+}
+
+.mrg-auto {
+    width: 80%;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 a {

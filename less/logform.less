@@ -1,17 +1,23 @@
 @import "variables.less";
 
-.enter {
-    background-color: @white;
-    padding: @form-indent;
-    max-width: @form-width;
-    /* margin: 0 auto; */
-    border-radius: @unit;
-    /* box-shadow: 0 4px 10px 4px rgba(darken(@item-bg, 10%), .3); */
+.login {
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: @hgt-indent;
 }
 
-.tab-list {
-    margin-bottom: @form-indent;
-    background-color: @item-bg;
+.wraper {
+    width: @form-width;
+    border-radius: @unit;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.2), 0 1px 5px 0 rgba(0,0,0,0.12);
+    padding: @hgt-indent 2 * @hgt-indent;
+}
+
+.tab-group {
+    padding-bottom: @hgt-indent;
 
     .tab {
         float: left;
@@ -21,7 +27,7 @@
         text-align: center;
         transition: .5s ease;
         border-radius: @unit;
-
+        font-weight: 500;
         a {
             padding: @indent * 3;
         }
@@ -39,7 +45,7 @@
 }
 
 .top-row {
-    > .col-wrap {
+    > div {
         float: left;
         width: 48%;
         margin-right: 4%;
@@ -56,9 +62,14 @@
     }
 }
 
+.field-wrap {
+    position: relative;
+    margin-bottom: 40px;
+}
+
 .col-wrap {
     position: relative;
-    margin-bottom: @form-indent;
+    margin-bottom: @hgt-indent;
 }
 
 label {
@@ -113,4 +124,33 @@ input {
 .forgot {
     margin-top: -20px;
     text-align: right;
+}
+
+.text {
+    text-align: center;
+    padding: @hgt-indent 0 @hgt-indent / 2;
+
+    span {
+        font-size: @body-fsize + 0.1;
+        letter-spacing: .1em;
+        color: rgba(@black, .5);
+    }
+}
+
+.log-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-item {
+    width: 35px;
+    margin: 10px;
+    img {
+        border-radius: 50%;
+
+        &:hover {
+            box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.2);
+        }
+    }
 }

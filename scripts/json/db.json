@@ -1,0 +1,746 @@
+{
+    "books": [
+        {
+            "id": "1b",
+            "name": "J. K. Rowling",
+            "img": "./media/img/books/rowling.jpg",
+            "language": "English",
+            "country": "UK",
+            "about": "",
+            "data": {
+                "single": [
+                    {
+                        "id": "1bsn1",
+                        "name": "The Casual Vacancy",
+                        "img": "./media/img/books/casual_vacancy.jpg",
+                        "file": "",
+                        "year": 2012,
+                        "genre": [
+                            "Fiction",
+                            "Tragicomedy"
+                        ],
+                        "about": ""
+                    }
+                ],
+                "set": [
+                    {
+                        "id": "1bst1",
+                        "name": "Harry Potter",
+                        "genre": [
+                            "Drama",
+                            "Fantasy Fiction",
+                            "Mystery",
+                            "Thriller",
+                            "Young Adult"
+                        ],
+                        "about": "",
+                        "itemNumber": 7,
+                        "items": [
+                            {
+                                "id": "1bst11",
+                                "name": "Harry Potter and The Philosopher's Stone",
+                                "img": "./media/img/books/hp_1.jpg",
+                                "file": "",
+                                "year": 1997,
+                                "about": ""
+                            },
+                            {
+                                "id": "1bst12",
+                                "name": "Harry Potter and The Chamber of Secrets",
+                                "img": "./media/img/books/hp_2.jpg",
+                                "file": "",
+                                "year": 1998,
+                                "about": ""
+                            },
+                            {
+                                "id": "1bst13",
+                                "name": "Harry Potter and The Prisoner of Azkaban",
+                                "img": "./media/img/books/hp_3.jpg",
+                                "file": "",
+                                "year": 1999,
+                                "about": ""
+                            },
+                            {
+                                "id": "1bst14",
+                                "name": "Harry Potter and The Goblet of Fire",
+                                "img": "./media/img/books/hp_4.jpg",
+                                "file": "",
+                                "year": 2000,
+                                "about": ""
+                            },
+                            {
+                                "id": "1bst15",
+                                "name": "Harry Potter and The Order of the Phoenix",
+                                "img": "./media/img/books/hp_5.jpg",
+                                "file": "",
+                                "year": 2003,
+                                "about": ""
+                            },
+                            {
+                                "id": "1bst16",
+                                "name": "Harry Potter and The Half-Blood Prince",
+                                "img": "./media/img/books/hp_6.jpg",
+                                "file": "",
+                                "year": 2005,
+                                "about": ""
+                            },
+                            {
+                                "id": "1bst17",
+                                "name": "Harry Potter and The Deathly Hallows",
+                                "img": "./media/img/books/hp_7.jpg",
+                                "file": "",
+                                "year": 2007,
+                                "about": ""
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "2b",
+            "name": "Ray Bradbury",
+            "img": "./media/img/books/bradbury.jpg",
+            "language": "English",
+            "country": "US",
+            "about": "",
+            "data": {
+                "single": [
+                    {
+                        "id": "2bsn1",
+                        "name": "Fahrenheit 451",
+                        "img": "./media/img/books/fahrenheit.jpg",
+                        "file": "",
+                        "year": 1953,
+                        "genre": [
+                            "Dystopia",
+                            "Utopia"
+                        ],
+                        "about": ""
+                    },
+                    {
+                        "id": "2bsn2",
+                        "name": "The Martian Chronicles",
+                        "img": "./media/img/books/martianchronicles.jpg",
+                        "file": "",
+                        "year": 1950,
+                        "genre": [
+                            "Dystopia",
+                            "Horror",
+                            "Post-Apocalyptic",
+                            "Sci-Fi",
+                            "Utopia"
+                        ],
+                        "about": ""
+                    },
+                    {
+                        "id": "2bsn3",
+                        "name": "The Illustrated Man",
+                        "img": "./media/img/books/illustrated.jpg",
+                        "file": "",
+                        "year": 1951,
+                        "genre": [
+                            "Sci-Fi"
+                        ],
+                        "about": ""
+                    },
+                    {
+                        "id": "2bsn4",
+                        "name": "I Sing the Body Electric",
+                        "img": "./media/img/books/stories.jpg",
+                        "file": "",
+                        "year": 1969,
+                        "genre": [
+                            "Sci-Fi",
+                            "Short Story"
+                        ],
+                        "about": ""
+                    }
+                ]
+            }
+        },
+        {
+            "id": "3b",
+            "name": "George R. R. Martin",
+            "img": "./media/img/books/martin.jpg",
+            "language": "English",
+            "country": "US",
+            "about": "",
+            "data": {
+                "single": [
+                    {
+                        "id": "3bsn1",
+                        "name": "With Morning Comes Mistfall",
+                        "img": "./media/img/quest_mark.svg",
+                        "file": "",
+                        "year": 1973,
+                        "genre": [
+                            "Fantasy Fiction",
+                            "Sci-Fi"
+                        ],
+                        "about": ""
+                    },
+                    {
+                        "id": "3bsn2",
+                        "name": "Dying of the Light",
+                        "img": "./media/img/quest_mark.svg",
+                        "file": "",
+                        "year": 1977,
+                        "genre": [
+                            "Sci-Fi"
+                        ],
+                        "about": ""
+                    }
+                ],
+                "set": [
+                    {
+                        "id": "3bst1",
+                        "name": "A Song of Ice and Fire",
+                        "genre": [
+                            "Epic Fantasy"
+                        ],
+                        "about": "",
+                        "itemNumber": 7,
+                        "items": [
+                            {
+                                "id": "3bst11",
+                                "name": "A Game of Thrones",
+                                "img": "./media/img/books/gt_1.jpg",
+                                "file": "",
+                                "year": 1996,
+                                "about": ""
+                            },
+                            {
+                                "id": "3bst12",
+                                "name": "A Clash of Kings",
+                                "img": "./media/img/books/gt_2.jpg",
+                                "file": "",
+                                "year": 1998,
+                                "about": ""
+                            },
+                            {
+                                "id": "3bst13",
+                                "name": "A Storm of Swords",
+                                "img": "./media/img/books/gt_3.jpg",
+                                "file": "",
+                                "year": 2000,
+                                "about": ""
+                            },
+                            {
+                                "id": "3bst14",
+                                "name": "A Feast for Crows",
+                                "img": "./media/img/books/gt_4.jpg",
+                                "file": "",
+                                "year": 2005,
+                                "about": ""
+                            },
+                            {
+                                "id": "3bst15",
+                                "name": "A Dance with Dragons",
+                                "img": "./media/img/books/gt_5.jpg",
+                                "file": "",
+                                "year": 2011,
+                                "about": ""
+                            },
+                            {
+                                "id": "3bst16",
+                                "name": "The Winds of Winter",
+                                "img": "./media/img/books/gt_6.jpg",
+                                "file": "",
+                                "year": "forthcoming",
+                                "about": ""
+                            },
+                            {
+                                "id": "3bst17",
+                                "name": "A Dream of Spring",
+                                "img": "./media/img/books/gt_7.jpg",
+                                "file": "",
+                                "year": "forthcoming",
+                                "about": ""
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "4b",
+            "name": "Margaret Atwood",
+            "img": "./media/img/books/atwood.jpg",
+            "language": "English",
+            "country": "Canada",
+            "about": "",
+            "data": {
+                "single": [
+                    {
+                        "id": "4bsn1",
+                        "name": "The Handmaid's Tale",
+                        "img": "./media/img/books/ht.jpg",
+                        "file": "",
+                        "year": 1985,
+                        "genre": [
+                            "Dystopia",
+                            "Speculative Fiction",
+                            "Utopia"
+                        ],
+                        "about": ""
+                    },
+                    {
+                        "id": "4bsn2",
+                        "name": "The Blind Assassin",
+                        "img": "./media/img/books/cat.jpg",
+                        "file": "",
+                        "year": 1988,
+                        "genre": [
+                            "Novel"
+                        ],
+                        "about": ""
+                        }
+                ]
+            }
+        }
+    ],
+    "audios": [
+        {
+            "id": "1a",
+            "name": "Kendrick Lamar",
+            "img": "./media/img/quest_mark.svg",
+            "language": "English",
+            "country": "US",
+            "about": "",
+            "data": {
+                "single": [
+                    {
+                        "id": "1asn1",
+                        "name": "BLOOD.",
+                        "img": "./media/img/quest_mark.svg",
+                        "file": "./media/audio/01. BLOOD..mp3",
+                        "year": 2017,
+                        "genre": [
+                            "Conscious Hip Hop"
+                        ]
+                    },
+                    {
+                        "id": "1asn2",
+                        "name": "DNA.",
+                        "img": "./media/audio/cover.jpg",
+                        "file": "./media/audio/02. DNA..mp3",
+                        "year": 2017,
+                        "genre": [
+                            "Conscious Hip Hop"
+                        ]
+                    }
+                ],
+                "set": [
+                    {
+                        "id": "1ast1",
+                        "name": "DAMN.",
+                        "img": "./media/audio/cover.jpg",
+                        "year": 2017,
+                        "genre": [
+                            "Conscious Hip Hop"
+                        ],
+                        "about": "",
+                        "itemNumber": 14,
+                        "items": [
+                            {
+                                "id": "1ast11",
+                                "name": "BLOOD.",
+                                "img": "./media/audio/cover.jpg",
+                                "file": "./media/audio/01. BLOOD..mp3"
+                            },
+                            {
+                                "id": "1ast12",
+                                "name": "DNA.",
+                                "img": "./media/audio/cover.jpg",
+                                "file": "./media/audio/02. DNA..mp3"
+                            },
+                            {
+                                "id": "1ast13",
+                                "name": "YAH.",
+                                "img": "./media/audio/cover.jpg",
+                                "file": "./media/audio/03. YAH..mp3"
+                            },
+                            {
+                                "id": "1ast14",
+                                "name": "ELEMENT.",
+                                "img": "./media/audio/cover.jpg",
+                                "file": "./media/audio/04. ELEMENT..mp3"
+                            },
+                            {
+                                "id": "1ast15",
+                                "name": "LOYALTY.",
+                                "img": "./media/audio/cover.jpg",
+                                "file": "./media/audio/10. LOVE. (FEAT. ZACARI.).mp3"
+                            },
+                            {
+                                "id": "1ast16",
+                                "name": "FEEL.",
+                                "img": "./media/audio/cover.jpg",
+                                "file": "./media/audio/05. FEEL..mp3"
+                            },
+                            {
+                                "id": "1ast17",
+                                "name": "PRIDE.",
+                                "img": "./media/audio/cover.jpg",
+                                "file": "./media/audio/07. PRIDE..mp3"
+                            },
+                            {
+                                "id": "1ast18",
+                                "name": "HUMBLE.",
+                                "img": "./media/audio/cover.jpg",
+                                "file": "./media/audio/06. LOYALTY. (FEAT. RIHANNA.).mp3"
+                            },
+                            {
+                                "id": "1ast19",
+                                "name": "LUST.",
+                                "img": "./media/audio/cover.jpg",
+                                "file": "./media/audio/06. LOYALTY. (FEAT. RIHANNA.).mp3"
+                            },
+                            {
+                                "id": "1ast110",
+                                "name": "LOVE.",
+                                "img": "./media/audio/cover.jpg",
+                                "file": "./media/audio/06. LOYALTY. (FEAT. RIHANNA.).mp3"
+                            },
+                            {
+                                "id": "1ast111",
+                                "name": "XXX.",
+                                "img": "./media/audio/cover.jpg",
+                                "file": "./media/audio/06. LOYALTY. (FEAT. RIHANNA.).mp3"
+                            },
+                            {
+                                "id": "1ast112",
+                                "name": "FEAR.",
+                                "img": "./media/audio/cover.jpg",
+                                "file": "./media/audio/06. LOYALTY. (FEAT. RIHANNA.).mp3"
+                            },
+                            {
+                                "id": "1ast113",
+                                "name": "GOD.",
+                                "img": "./media/audio/cover.jpg",
+                                "file": "./media/audio/06. LOYALTY. (FEAT. RIHANNA.).mp3"
+                            },
+                            {
+                                "id": "1ast114",
+                                "name": "DUCKWORTH.",
+                                "img": "./media/audio/cover.jpg",
+                                "file": "./media/audio/06. LOYALTY. (FEAT. RIHANNA.).mp3"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "2a",
+            "name": "Adele",
+            "img": "./media/img/quest_mark.svg",
+            "language": "English",
+            "country": "UK",
+            "about": "",
+            "data": {
+                "set": [
+                    {
+                        "id": "2ast1",
+                        "name": "DAMN.",
+                        "img": "./media/audio/cover.jpg",
+                        "year": 2017,
+                        "genre": [
+                            "Soul"
+                        ],
+                        "about": "",
+                        "itemNumber": 14,
+                        "items": [
+                            {
+                                "id": "2ast11",
+                                "name": "BLOOD.",
+                                "file": "./media/audio/01. BLOOD..mp3"
+                            },
+                            {
+                                "id": "2ast12",
+                                "name": "DNA.",
+                                "file": "./media/audio/02. DNA..mp3"
+                            },
+                            {
+                                "id": "2ast13",
+                                "name": "YAH.",
+                                "file": "./media/audio/03. YAH..mp3"
+                            },
+                            {
+                                "id": "2ast14",
+                                "name": "ELEMENT.",
+                                "file": "./media/audio/04. ELEMENT..mp3"
+                            },
+                            {
+                                "id": "2ast15",
+                                "name": "LOYALTY.",
+                                "file": "./media/audio/10. LOVE. (FEAT. ZACARI.).mp3"
+                            },
+                            {
+                                "id": "2ast16",
+                                "name": "FEEL.",
+                                "file": "./media/audio/05. FEEL..mp3"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ],
+    "videos": [
+        {
+            "id": "1v",
+            "name": "David Lynch",
+            "img": "./media/img/quest_mark.svg",
+            "language": "English",
+            "country": "US",
+            "about": "",
+            "data": {
+                "single": [
+                    {
+                        "id": "1vsn1",
+                        "name": "Claire Foy - Interview (FULL)",
+                        "img": "./media/video/crown.jpg",
+                        "file": "./media/video/The Crown's Claire Foy (Full Interview) - Chelsea - Netflix.mp4",
+                        "year": 2017,
+                        "genre": [
+                            "Interview"
+                        ],
+                        "about": ""
+                    },
+                    {
+                        "id": "1vsn2",
+                        "name": "RED Hydrogen One Review - I wanted this to be great!",
+                        "img": "./media/video/abstract.jpg",
+                        "file": "./media/video/RED Hydrogen One Review- I Wanted this to be Great!.mp4",
+                        "year": 2018,
+                        "genre": [
+                            "Review"
+                        ],
+                        "about": ""
+                    }
+                ],
+                "set": [
+                    {
+                        "id": "1vst1",
+                        "name": "Twin Peaks",
+                        "img": "./media/video/tp.jpg",
+                        "year": 2017,
+                        "genre": [
+                            "Drama",
+                            "Horror",
+                            "Mystery"
+                        ],
+                        "about": "",
+                        "itemNumber": 6,
+                        "items": [
+                            {
+                                "id": "1vst11",
+                                "name": "Episode 1",
+                                "img": "./media/video/tp.jpg",
+                                "file": "./media/video/RED Hydrogen One Review- I Wanted this to be Great!.mp4"
+                            },
+                            {
+                                "id": "1vst12",
+                                "name": "Episode 2",
+                                "img": "./media/video/tp.jpg",
+                                "file": "./media/video/The Crown's Claire Foy (Full Interview) - Chelsea - Netflix.mp4"
+                            },
+                            {
+                                "id": "1vst13",
+                                "name": "Episode 3",
+                                "img": "./media/video/tp.jpg",
+                                "file": "./media/video/Twin Peaks TV Series (1990) - Season 1 Trailer.mp4"
+                            },
+                            {
+                                "id": "1vst14",
+                                "name": "Episode 4",
+                                "img": "./media/video/tp.jpg",
+                                "file": "./media/video/Twin Peaks TV Series (1990) - Season 1 Trailer.mp4"
+                            },
+                            {
+                                "id": "1vst15",
+                                "name": "Episode 5",
+                                "img": "./media/video/tp.jpg",
+                                "file": "./media/video/Twin Peaks TV Series (1990) - Season 1 Trailer.mp4"
+                            },
+                            {
+                                "id": "1vst16",
+                                "name": "Episode 6",
+                                "img": "./media/video/tp.jpg",
+                                "file": "./media/video/Twin Peaks TV Series (1990) - Season 1 Trailer.mp4"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ],
+    "photos": [
+        {
+            "id": "1ph",
+            "name": "David Lachapelle",
+            "img": "./media/img/quest_mark.svg",
+            "language": "English",
+            "country": "US",
+            "about": "",
+            "data": {
+                "single": [
+                    {
+                        "id": "1phsn1",
+                        "name": "",
+                        "img": "./media/img/photos/jesus-street.jpg",
+                        "year": 2005,
+                        "genre": [
+                            "Fine-Art"
+                        ],
+                        "about": ""
+                    },
+                    {
+                        "id": "1phsn2",
+                        "name": "",
+                        "img": "./media/img/photos/medieval.jpg",
+                        "year": 2017,
+                        "genre": [
+                            "Fine-Art"
+                        ],
+                        "about": ""
+                    },
+                    {
+                        "id": "1phsn3",
+                        "name": "New World",
+                        "img": "./media/img/photos/new world.jpg",
+                        "year": 2017,
+                        "genre": [
+                            "Fine-Art"
+                        ],
+                        "about": ""
+                    },
+                    {
+                        "id": "1phsn4",
+                        "name": "Jesus Police",
+                        "img": "./media/img/photos/jesus-police.jpg",
+                        "year": 2010,
+                        "genre": [
+                            "Fine-Art"
+                        ],
+                        "about": ""
+                    },
+                    {
+                        "id": "1phsn5",
+                        "name": "Pink",
+                        "img": "./media/img/photos/pink.jpg",
+                        "year": 2015,
+                        "genre": [
+                            "Fine-Art"
+                        ],
+                        "about": ""
+                    },
+                    {
+                        "id": "1phsn6",
+                        "name": "Tupac",
+                        "img": "./media/img/photos/perry.jpg",
+                        "year": 2000,
+                        "genre": [
+                            "Fine-Art"
+                        ],
+                        "about": ""
+                    },
+                    {
+                        "id": "1phsn7",
+                        "name": "Person Of Woman",
+                        "img": "./media/img/photos/hand.jpg",
+                        "year": 2003,
+                        "genre": [
+                            "Fine-Art"
+                        ],
+                        "about": ""
+                    }
+                ]
+            }
+        },
+        {
+            "id": "2ph",
+            "name": "David Lachapelle",
+            "img": "./media/img/quest_mark.svg",
+            "language": "English",
+            "country": "US",
+            "about": "",
+            "data": {
+                "single": [
+                    {
+                        "id": "2phsn1",
+                        "name": "",
+                        "img": "./media/img/photos/jesus-street.jpg",
+                        "year": 2005,
+                        "genre": [
+                            "Fine-Art"
+                        ],
+                        "about": ""
+                    },
+                    {
+                        "id": "2phsn2",
+                        "name": "",
+                        "img": "./media/img/photos/medieval.jpg",
+                        "year": 2017,
+                        "genre": [
+                            "Fine-Art"
+                        ],
+                        "about": ""
+                    },
+                    {
+                        "id": "2phsn3",
+                        "name": "New World",
+                        "img": "./media/img/photos/new world.jpg",
+                        "year": 2017,
+                        "genre": [
+                            "Fine-Art"
+                        ],
+                        "about": ""
+                    },
+                    {
+                        "id": "2phsn4",
+                        "name": "Jesus Police",
+                        "img": "./media/img/photos/jesus-police.jpg",
+                        "year": 2010,
+                        "genre": [
+                            "Fine-Art"
+                        ],
+                        "about": ""
+                    },
+                    {
+                        "id": "2phsn5",
+                        "name": "Pink",
+                        "img": "./media/img/photos/pink.jpg",
+                        "year": 2015,
+                        "genre": [
+                            "Fine-Art"
+                        ],
+                        "about": ""
+                    },
+                    {
+                        "id": "2phsn6",
+                        "name": "Tupac",
+                        "img": "./media/img/photos/hand.jpg",
+                        "year": 2000,
+                        "genre": [
+                            "Fine-Art"
+                        ],
+                        "about": ""
+                    },
+                    {
+                        "id": "2phsn7",
+                        "name": "Person Of Woman",
+                        "img": "./media/img/photos/hand.jpg",
+                        "year": 2003,
+                        "genre": [
+                            "Fine-Art"
+                        ],
+                        "about": ""
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -5,6 +5,27 @@
 .hide {
   display: none;
 }
+.row {
+  display: none;
+}
+.show {
+  display: flex;
+}
+.show-l {
+  display: block;
+}
+.hide-aside {
+  visibility: hidden;
+  transform: translateX(-280px);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0.25s;
+}
+.centered {
+  margin-left: 0;
+  transition: margin-left 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.shadow {
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.28);
+}
 .active {
   background-color: rgba(156, 214, 158, 0.719);
 }
@@ -78,7 +99,7 @@
   width: 4.2rem;
   padding: 0.8rem;
   background-color: transparent;
-  background-image: url(../img/search-black.svg);
+  background-image: url(../media/img/search-black.svg);
   background-position: center;
   background-size: 1.6rem;
   background-repeat: no-repeat;
@@ -88,7 +109,7 @@
   width: 4.2rem;
   padding: 0.8rem;
   background-color: transparent;
-  background-image: url(../img/close.svg);
+  background-image: url(../media/img/close.svg);
   background-position: center;
   background-size: 1.6rem;
   background-repeat: no-repeat;

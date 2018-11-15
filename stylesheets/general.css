@@ -5,6 +5,27 @@
 .hide {
   display: none;
 }
+.row {
+  display: none;
+}
+.show {
+  display: flex;
+}
+.show-l {
+  display: block;
+}
+.hide-aside {
+  visibility: hidden;
+  transform: translateX(-280px);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0.25s;
+}
+.centered {
+  margin-left: 0;
+  transition: margin-left 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.shadow {
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.28);
+}
 .active {
   background-color: rgba(156, 214, 158, 0.719);
 }
@@ -29,12 +50,21 @@ main {
   position: relative;
   top: 7.4rem;
   height: calc(100% - 7.4rem);
+  padding-top: 0.1rem;
   overflow: auto;
 }
 .container {
-  display: flex;
-  justify-content: center;
   margin-left: 28rem;
+  transition: margin-left 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mrg-auto {
+  width: 80%;
+  margin: auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 a {
   display: block;

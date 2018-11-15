@@ -1,13 +1,7 @@
-@import "reset.css";
-@import "general.css";
-@import "header.css";
-@import "aside.css";
-/*@import "mainBody.css";*/
-
-
-@import "logform.css";
-/*
-@import "books.css";
-@import "video.css"; */
-/* @import "audio.css"; */
-/* @import "photo.css"; */
+@import 'reset.css';
+@import 'variables.css';
+@import 'general.css';
+@import 'header.css';
+@import 'aside.css';
+@import 'logform.css';
+@import 'books.css';

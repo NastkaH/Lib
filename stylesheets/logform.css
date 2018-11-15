@@ -5,25 +5,51 @@
 .hide {
   display: none;
 }
+.row {
+  display: none;
+}
+.show {
+  display: flex;
+}
+.show-l {
+  display: block;
+}
+.hide-aside {
+  visibility: hidden;
+  transform: translateX(-280px);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0.25s;
+}
+.centered {
+  margin-left: 0;
+  transition: margin-left 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.shadow {
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.28);
+}
 .active {
   background-color: rgba(156, 214, 158, 0.719);
 }
 .active a {
   font-weight: 500;
 }
-.enter {
-  background-color: #ffffff;
+.login {
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   padding: 4rem;
-  max-width: 60rem;
-  /* margin: 0 auto; */
+}
+.wraper {
+  width: 60rem;
   border-radius: 0.2rem;
-  /* box-shadow: 0 4px 10px 4px rgba(darken(@item-bg, 10%), .3); */
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  padding: 4rem 8rem;
 }
-.tab-list {
-  margin-bottom: 4rem;
-  background-color: #e6e6e6;
+.tab-group {
+  padding-bottom: 4rem;
 }
-.tab-list .tab {
+.tab-group .tab {
   float: left;
   width: 50%;
   font-size: 2rem;
@@ -31,30 +57,35 @@
   text-align: center;
   transition: 0.5s ease;
   border-radius: 0.2rem;
+  font-weight: 500;
 }
-.tab-list .tab a {
+.tab-group .tab a {
   padding: 1.5rem;
 }
-.tab-list .tab:hover {
+.tab-group .tab:hover {
   background: rgba(120, 199, 123, 0.719);
 }
-.tab-list:after {
+.tab-group:after {
   content: "";
   display: table;
   clear: both;
 }
-.top-row > .col-wrap {
+.top-row > div {
   float: left;
   width: 48%;
   margin-right: 4%;
 }
-.top-row > .col-wrap:last-child {
+.top-row > div:last-child {
   margin: 0;
 }
 .top-row:after {
   content: "";
   display: table;
   clear: both;
+}
+.field-wrap {
+  position: relative;
+  margin-bottom: 40px;
 }
 .col-wrap {
   position: relative;
@@ -106,4 +137,28 @@ input:focus {
 .forgot {
   margin-top: -20px;
   text-align: right;
+}
+.text {
+  text-align: center;
+  padding: 4rem 0 2rem;
+}
+.text span {
+  font-size: 1.7rem;
+  letter-spacing: 0.1em;
+  color: rgba(0, 0, 0, 0.5);
+}
+.log-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-item {
+  width: 35px;
+  margin: 10px;
+}
+.login-item img {
+  border-radius: 50%;
+}
+.login-item img:hover {
+  box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.2);
 }

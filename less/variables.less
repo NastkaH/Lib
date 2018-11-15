@@ -67,6 +67,33 @@
     display: none;
 }
 
+.row {
+    display: none;
+}
+
+.show {
+    display: flex;
+}
+
+.show-l {
+    display: block;
+}
+
+.hide-aside {
+    visibility: hidden;
+    transform: translateX(-280px);
+    transition: transform .25s cubic-bezier(0.4,0.0,0.2,1), visibility 0s linear .25s;
+}
+
+.centered {
+    margin-left: 0;
+    transition: margin-left .25s cubic-bezier(0.4,0.0,0.2,1);
+}
+
+.shadow {
+    box-shadow: 0 0 16px rgba(0,0,0,.28);
+}
+
 .hover() {
     background-color: @hover-color;
 }
