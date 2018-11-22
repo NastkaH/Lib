@@ -14,6 +14,7 @@
     (function () {
         pages.loadJSON();
         pages.manageContent([['[data-role="triger"]', 'show'], ['[data-role="log-triger"]', 'show-l']]);
+        pages.shadowOnScroll();
     })();
 
     /* So that we can interact with the instance of Page, we export it to the global namespace. */

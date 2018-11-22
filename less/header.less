@@ -2,17 +2,27 @@
 
 .mn-hd {
     position: fixed;
-    display: flex;
-    justify-content: space-between;
-    height: @header-hgt;
+    height: @mheader-hgt;
     width: 100%;
-    margin: @header-mrg 0;
-    padding: 0 @header-pdng;
-    letter-spacing: @l-space;
+    padding: (@mheader-hgt - @header-hgt) / 2 @header-pdng;
+    transition: box-shadow 0.2s;
+    z-index: 2;
 
-    & .other-ico:not(:last-child) {
-        margin-right: @indent;
+    & > div {
+        margin: auto 0;
+        display: flex;
+        justify-content: space-between;
+        height: @header-hgt;
+        letter-spacing: @l-space;
+
+        & .other-ico:not(:last-child) {
+            margin-right: @indent;
+        }
     }
+}
+
+.scroll {
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.2);
 }
 
 .logo-ico {
@@ -41,6 +51,7 @@
 
     &-input {
         height: @logo-hgt;
+        margin: 0;
         padding: @sch-pdng;
         width: @input-wd;
         font-size: @body-fsize;

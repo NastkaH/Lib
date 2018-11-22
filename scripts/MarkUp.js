@@ -209,6 +209,21 @@
             });
         }
 
+        shadowOnScroll() {
+            let hd = document.querySelector('.mn-hd');
+            let scrollTrigs = document.querySelectorAll('[data-scroll="trigger"]');
+
+            scrollTrigs.forEach(trigger => {
+                trigger.addEventListener('scroll', () => {
+                    if (trigger.scrollTop > 1) {
+                        hd.classList.add('scroll');
+                    } else {
+                        hd.classList.remove('scroll');
+                    }
+                });
+            });
+        }
+
         setToActive(trigger) {
             let current = document.getElementsByClassName('active');
 

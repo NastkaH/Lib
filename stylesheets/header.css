@@ -34,16 +34,24 @@
 }
 .mn-hd {
   position: fixed;
+  height: 7.4rem;
+  width: 100%;
+  padding: 1rem 1rem;
+  transition: box-shadow 0.2s;
+  z-index: 2;
+}
+.mn-hd > div {
+  margin: auto 0;
   display: flex;
   justify-content: space-between;
   height: 5.4rem;
-  width: 100%;
-  margin: 1rem 0;
-  padding: 0 1rem;
   letter-spacing: 0.07em;
 }
-.mn-hd .other-ico:not(:last-child) {
+.mn-hd > div .other-ico:not(:last-child) {
   margin-right: 0.5rem;
+}
+.scroll {
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
 }
 .logo-ico {
   border-radius: 50%;
@@ -84,6 +92,7 @@
 }
 .sch-input {
   height: 3.2rem;
+  margin: 0;
   padding: 0.8rem;
   width: calc(50vw - 4.2rem * 2);
   font-size: 1.6rem;

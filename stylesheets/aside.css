@@ -60,6 +60,12 @@
   transition: 0.25s ease;
   border-radius: 0 50px 50px 0;
 }
+.sb-ls-it:first-child {
+  margin-top: 1rem;
+}
+.sb-ls-it:last-child {
+  margin-bottom: 1rem;
+}
 .sb-ls-it:hover {
   background-color: rgba(120, 199, 123, 0.719);
 }
