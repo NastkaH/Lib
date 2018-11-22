@@ -38,7 +38,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 4rem;
+  padding: 0 4rem 4rem;
 }
 .wraper {
   width: 60rem;
@@ -57,7 +57,6 @@
   text-align: center;
   transition: 0.5s ease;
   border-radius: 0.2rem;
-  font-weight: 500;
 }
 .tab-group .tab a {
   padding: 1.5rem;
@@ -107,6 +106,7 @@ input {
   width: 100%;
   height: 100%;
   padding: 0.5rem 0.8rem;
+  margin-top: 0.5rem;
   background: none;
   border: 1px solid #e6e6e6;
   border-radius: 0.2rem;
@@ -161,4 +161,7 @@ input:focus {
 }
 .login-item img:hover {
   box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.2);
+}
+.a {
+  display: none;
 }

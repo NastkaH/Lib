@@ -1,0 +1,61 @@
+@import "variables.less";
+
+.page-wrap {
+    display: flex;
+    flex-direction: column;
+    margin: 0 @2indent 25px;
+    padding: @2indent  @2indent + 0.5;
+
+    background-color: @white;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.2), 0 1px 5px 0 rgba(0,0,0,0.12);
+    border-radius: @unit;
+}
+
+.hd-wrap {
+    display: flex;
+    .img-wrap {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        align-items: center;
+        .det-img {
+            height: auto;
+            width: 60%;
+            margin: auto;
+            border-radius: @unit;
+        }
+    }
+
+    .info-cont {
+        flex: 1;
+        text-align: center;
+        .page-hd {
+            font-size: @body-fsize + 0.4rem;
+            font-weight: 600;
+            letter-spacing: @l-space;
+        }
+    }
+}
+
+.file-wrap {
+    div a {
+       /*  float: left; */
+        margin-top: 1rem;
+        padding: @2indent @2indent + 0.5;
+        /* width: 50%; */
+        text-align: center;
+        letter-spacing: @l-space;
+        transition: .25s ease;
+        border-radius: @unit;
+
+        &:hover {
+            .hover();
+        }
+    }
+
+/*     div:first-child a {
+        border-right: @brd;
+    } */
+}
+
+

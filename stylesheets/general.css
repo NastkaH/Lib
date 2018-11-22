@@ -57,6 +57,36 @@ main {
   margin-left: 28rem;
   transition: margin-left 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
+.sctn-hd {
+  width: 100%;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.sctn-hd h1,
+.sctn-hd h2 {
+  font-weight: 400;
+  font-size: 3rem;
+  letter-spacing: 0.07em;
+}
+textarea {
+  font: 1.8rem 'Segoe UI', Arial, sans-serif;
+  letter-spacing: 0.05em;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-height: 60px;
+  padding: 0.5rem 0.8rem;
+  margin-top: 0.5rem;
+  border: 1px solid #e6e6e6;
+  border-radius: 0.2rem;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  outline: none;
+}
+textarea:focus {
+  border-color: rgba(156, 214, 158, 0.719);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
 .mrg-auto {
   width: 80%;
   margin: auto;

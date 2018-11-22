@@ -17,174 +17,206 @@
 
         <link rel="stylesheet" href="stylesheets/main.css">
     </head>
-<body>
-    <header class="mn-hd">
-        <div id="burger" class="other-ico">
-                <a href="#menu">
-                    <img src="media/img/menu.svg" alt="menu" />
-                </a>
-            </div>
-            <div id="defaultOpen" class="logo-ico trg" data-show="triger">
-                <a href="#home">
-                    <img src="media/img/cloud-computing.svg" alt="logo" />
-                    <!-- <span>Buble</span> -->
-                </a>
-            </div>
-            <div class="mn-hd-sch">
-                <form action="#" method="POST" name="searchForm" role="search">
-                    <div class="sch">
-                        <button class="sch-sbmt" type="submit" name="searchSubmit" value="Search"></button>
-                        <input class="sch-input" type="text" name="searchInput" maxlength="2048" title="Search" autocomplete="off" spellcheck="false">
-                        <button class="sch-rst" type="reset" name="searchReset" value="Clear"></button>
-                    </div>
-                </form>
-            </div>
-            <div class="other-ico trg" data-show="triger">
-                <a href="#upload">
-                    <img src="media/img/cloud-upload.svg" alt="search" />
-                </a>
-            </div>
-            <div class="other-ico trg" data-show="triger">
-                <a href="#logform">
-                    <img src="media/img/user-black.svg" alt="login" />
-                </a>
-            </div>
-    </header>
+    <body>
+        <header class="mn-hd">
+            <div id="burger" class="other-ico">
+                    <a href="#menu">
+                        <img src="media/img/menu.svg" alt="menu" />
+                    </a>
+                </div>
+                <div class="logo-ico active" data-role="triger">
+                    <a href="#home">
+                        <img src="media/img/cloud-computing.svg" alt="logo" />
+                        <!-- <span>Buble</span> -->
+                    </a>
+                </div>
+                <div class="mn-hd-sch">
+                    <form action="#" method="POST" name="searchForm" role="search">
+                        <div class="sch">
+                            <button class="sch-sbmt" type="submit" name="searchSubmit" value="Search"></button>
+                            <input class="sch-input" type="text" name="searchInput" maxlength="2048" title="Search" autocomplete="off" spellcheck="false">
+                            <button class="sch-rst" type="reset" name="searchReset" value="Clear"></button>
+                        </div>
+                    </form>
+                </div>
+                <div class="other-ico" data-role="triger">
+                    <a href="#upload">
+                        <img src="media/img/cloud-upload.svg" alt="search" />
+                    </a>
+                </div>
+                <div class="other-ico" data-role="triger">
+                    <a href="#logform">
+                        <img src="media/img/user-black.svg" alt="login" />
+                    </a>
+                </div>
+        </header>
 
-    <main>
-        <aside class="sb" data-visible="target" >
-            <nav class="sb-ls">
-                <ul>
-                    <li id="defaultNav" class="sb-ls-it trg active" role="menuitem" data-role="active"><a class="sb-ls-ln" href="#home">
-                        <img class="nav-ico" src="media/img/cloud-computing.svg" alt="logo">
-                        <span>Home</span>
+        <main>
+            <aside class="sb" data-visible="target">
+                <nav class="sb-ls">
+                    <ul>
+    <!--                     <li id="defaultNav" class="sb-ls-it active" role="menuitem" data-role="active" data-show="triger"><a class="sb-ls-ln" href="#home">
+                            <img class="nav-ico" src="media/img/cloud-computing.svg" alt="logo">
+                            <span>Home</span>
+                        </a></li> -->
+                        <li class="sb-ls-it" role="menuitem" data-role="triger"><a class="sb-ls-ln" href="#books">
+                            <img class="nav-ico" src="media/img/cloud-book.svg" alt="book">
+                            <span>Books</span>
+                        </a></li>
+                        <li class="sb-ls-it" role="menuitem" data-role="triger"><a class="sb-ls-ln" href="#audios">
+                            <img class="nav-ico" src="media/img/cloud-music.svg" alt="audio">
+                            <span>Audio </span>
+                        </a></li>
+                        <li class="sb-ls-it" role="menuitem" data-role="triger"><a class="sb-ls-ln" href="#videos">
+                            <img class="nav-ico" src="media/img/cloud-img.svg" alt="photo">
+                            <span>Video</span>
+                        </a></li>
+                        <li class="sb-ls-it" role="menuitem" data-role="triger"><a class="sb-ls-ln" href="#photos">
+                            <img class="nav-ico" src="media/img/cloud-img.svg" alt="photo">
+                            <span>Photo</span>
+                        </a></li>
+                    </ul>
+                </nav>
+                <ul class="sb-ls">
+                    <div class="sb-ls-hd">Genre</div>
+                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
+                        <img class="nav-ico" src="media/img/next.svg" alt="next">
+                        <span>Fiction</span>
                     </a></li>
-                    <li class="sb-ls-it trg" role="menuitem" data-role="active" data-show="triger"><a class="sb-ls-ln" href="#books">
-                        <img class="nav-ico" src="media/img/cloud-book.svg" alt="book">
-                        <span>Books</span>
+                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
+                        <img class="nav-ico" src="media/img/next.svg" alt="next">
+                        <span>Tragicomedy</span>
                     </a></li>
-                    <li class="sb-ls-it trg" role="menuitem" data-role="active" data-show="triger"><a class="sb-ls-ln" href="#audios">
-                        <img class="nav-ico" src="media/img/cloud-music.svg" alt="audio">
-                        <span>Audio </span>
+                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
+                        <img class="nav-ico" src="media/img/next.svg" alt="next">
+                        <span>Fantasy Fiction</span>
                     </a></li>
-                    <li class="sb-ls-it trg" role="menuitem" data-role="active" data-show="triger"><a class="sb-ls-ln" href="#videos">
-                        <img class="nav-ico" src="media/img/cloud-img.svg" alt="photo">
-                        <span>Video</span>
+                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
+                        <img class="nav-ico" src="media/img/next.svg" alt="next">
+                        <span>Drama</span>
                     </a></li>
-                    <li class="sb-ls-it trg" role="menuitem" data-role="active" data-show="triger"><a class="sb-ls-ln" href="#photos">
-                        <img class="nav-ico" src="media/img/cloud-img.svg" alt="photo">
-                        <span>Photo</span>
+                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
+                        <img class="nav-ico" src="media/img/next.svg" alt="next">
+                        <span>Young Adult</span>
+                    </a></li>
+                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
+                        <img class="nav-ico" src="media/img/next.svg" alt="next">
+                        <span>Mystery</span>
+                    </a></li>
+                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
+                        <img class="nav-ico" src="media/img/next.svg" alt="next">
+                        <span>Thriller</span>
+                    </a></li>
+                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
+                        <img class="nav-ico" src="media/img/next.svg" alt="next">
+                        <span>Epic Fantasy</span>
+                    </a></li>
+                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
+                        <img class="nav-ico" src="media/img/next.svg" alt="next">
+                        <span>Utopia</span>
+                    </a></li>
+                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
+                        <img class="nav-ico" src="media/img/next.svg" alt="next">
+                        <span>Dystopia</span>
+                    </a></li>
+                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
+                        <img class="nav-ico" src="media/img/next.svg" alt="next">
+                        <span>Post-Apocalyptic</span>
+                    </a></li>
+                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
+                        <img class="nav-ico" src="media/img/next.svg" alt="next">
+                        <span>Horror</span>
+                    </a></li>
+                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
+                        <img class="nav-ico" src="media/img/next.svg" alt="next">
+                        <span>Short Story</span>
+                    </a></li>
+                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
+                        <img class="nav-ico" src="media/img/next.svg" alt="next">
+                        <span>Speculative Fiction</span>
+                    </a></li>
+                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
+                        <img class="nav-ico" src="media/img/next.svg" alt="next">
+                        <span>Novel</span>
+                    </a></li>
+                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
+                        <img class="nav-ico" src="media/img/next.svg" alt="next">
+                        <span>Domestic Fiction</span>
+                    </a></li>
+                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
+                        <img class="nav-ico" src="media/img/next.svg" alt="next">
+                        <span>Historical Fiction</span>
                     </a></li>
                 </ul>
-            </nav>
-            <ul class="sb-ls">
-                <div class="sb-ls-hd">Genre</div>
-                <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
-                    <img class="nav-ico" src="media/img/next.svg" alt="next">
-                    <span>Fiction</span>
-                </a></li>
-                <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
-                    <img class="nav-ico" src="media/img/next.svg" alt="next">
-                    <span>Tragicomedy</span>
-                </a></li>
-                <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
-                    <img class="nav-ico" src="media/img/next.svg" alt="next">
-                    <span>Fantasy Fiction</span>
-                </a></li>
-                <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
-                    <img class="nav-ico" src="media/img/next.svg" alt="next">
-                    <span>Drama</span>
-                </a></li>
-                <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
-                    <img class="nav-ico" src="media/img/next.svg" alt="next">
-                    <span>Young Adult</span>
-                </a></li>
-                <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
-                    <img class="nav-ico" src="media/img/next.svg" alt="next">
-                    <span>Mystery</span>
-                </a></li>
-                <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
-                    <img class="nav-ico" src="media/img/next.svg" alt="next">
-                    <span>Thriller</span>
-                </a></li>
-                <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
-                    <img class="nav-ico" src="media/img/next.svg" alt="next">
-                    <span>Epic Fantasy</span>
-                </a></li>
-                <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
-                    <img class="nav-ico" src="media/img/next.svg" alt="next">
-                    <span>Utopia</span>
-                </a></li>
-                <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
-                    <img class="nav-ico" src="media/img/next.svg" alt="next">
-                    <span>Dystopia</span>
-                </a></li>
-                <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
-                    <img class="nav-ico" src="media/img/next.svg" alt="next">
-                    <span>Post-Apocalyptic</span>
-                </a></li>
-                <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
-                    <img class="nav-ico" src="media/img/next.svg" alt="next">
-                    <span>Horror</span>
-                </a></li>
-                <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
-                    <img class="nav-ico" src="media/img/next.svg" alt="next">
-                    <span>Short Story</span>
-                </a></li>
-                <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
-                    <img class="nav-ico" src="media/img/next.svg" alt="next">
-                    <span>Speculative Fiction</span>
-                </a></li>
-                <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
-                    <img class="nav-ico" src="media/img/next.svg" alt="next">
-                    <span>Novel</span>
-                </a></li>
-                <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
-                    <img class="nav-ico" src="media/img/next.svg" alt="next">
-                    <span>Domestic Fiction</span>
-                </a></li>
-                <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
-                    <img class="nav-ico" src="media/img/next.svg" alt="next">
-                    <span>Historical Fiction</span>
-                </a></li>
-            </ul>
-            <ul class="sb-ls">
-                <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
-                    <img class="nav-ico" src="media/img/info.svg" alt="next">
-                    <span>Info</span>
-                </a></li>
-                <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
-                    <img class="nav-ico" src="media/img/worldwide.svg" alt="contact">
-                    <span>Contact</span>
-                </a></li>
-                <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
-                    <img class="nav-ico" src="media/img/email.svg" alt="next">
-                    <span>Send response</span>
-                </a></li>
-            </ul>
-            <footer class="mn-ft">
-                <a href="#" class="mn-ft-ln">Confidentiality</a>
-                <a href="#" class="mn-ft-ln">Terms</a>
-            </footer>
-        </aside>
-        <section class="container">
-            <div class="mrg-auto" data-role="generate">
-                <section id="home" class="row show">
-                    <h1>HOME</h1>
-                </section>
-                <section id="upload" class="row">
-                    upload
-                </section>
-                <section id="logform" class="row">
-                    <div class="login">
-                        <div class="wraper">
-                            <form method="post" class="validate-form">
+                <ul class="sb-ls">
+                    <li class="sb-ls-it" role="menuitem" data-role="triger"><a class="sb-ls-ln" href="#info">
+                        <img class="nav-ico" src="media/img/info.svg" alt="next">
+                        <span>Info</span>
+                    </a></li>
+                    <li class="sb-ls-it" role="menuitem" data-role="triger"><a class="sb-ls-ln" href="#contact">
+                        <img class="nav-ico" src="media/img/worldwide.svg" alt="contact">
+                        <span>Contact</span>
+                    </a></li>
+                    <li class="sb-ls-it" role="menuitem" data-role="triger"><a class="sb-ls-ln" href="#response">
+                        <img class="nav-ico" src="media/img/email.svg" alt="next">
+                        <span>Send feedback</span>
+                    </a></li>
+                </ul>
+                <footer class="mn-ft">
+                    <a href="#" class="mn-ft-ln">Confidentiality</a>
+                    <a href="#" class="mn-ft-ln">Terms</a>
+                </footer>
+            </aside>
+            <section class="container">
+                <div class="mrg-auto" data-role="generate">
+                    <section id="detPage" data-role="generate-det-pg">
+                    </section>
+                    <section id="home" class="row show">
+                        <header class="sctn-hd">
+                            <h1>Library</h1>
+                        </header>
+                        <secction class="sl">
+                            <ul class="sl-ls">
+                                <li class="sl-ls-it">
+                                    <img src="media/img/slider/jesus-eat.jpg" />
+                                </li>
+                                <li class="sl-ls-it">
+                                    <img src="media/img/slider/jesus-eat.jpg" />
+                                </li>
+                                <li class="sl-ls-it">
+                                    <img src="media/img/slider/jesus-eat.jpg" />
+                                </li>
+                            </ul>
+                        </secction>
+                        <section data-role="generate-rows">
+
+                        </section>
+                    </section>
+                    <section id="upload" class="row">
+                        <header class="sctn-hd">
+                            <h2>Upload Files</h2>
+                        </header>
+                        <div class="drop-area">
+                            <form action="" method="post" class="file-upload" enctype="multipart/form-data">
+                                <label class="button" for="fileElem">Select files
+                                    <input type="file" name="newFile" id="fileElem" multiple>
+                                </label>
+                            </form>
+                            <div class="files-wrap"></div>
+                        </div>
+                    </section>
+                    <section id="logform" class="row">
+                        <header class="sctn-hd">
+                            <h2>Register or Login</h2>
+                        </header>
+                        <div class="login">
+                            <div class="wraper">
                                 <ul class="tab-group">
-                                    <li class="tab active"><a href="#signup">Sign Up</a></li>
-                                    <li class="tab"><a href="#login">Log In</a></li>
+                                    <li id="defaultLog" class="tab active" data-role="log-triger" ><a href="#signup">Sign Up</a></li>
+                                    <li class="tab" data-role="log-triger" ><a href="#login">Log In</a></li>
                                 </ul>
                                 <div class="tab-content">
-                                    <div id="signup">
+                                    <div id="signup" class="a show-l">
                                         <form action="/" method="post">
                                             <div class="top-row">
                                                 <div class="field-wrap">
@@ -231,7 +263,7 @@
                                             </a>
                                         </div>
                                     </div>
-                                    <div id="login">
+                                    <div id="login" class="a">
                                         <form action="/" method="post">
                                             <div class="field-wrap">
                                                 <label>
@@ -250,14 +282,348 @@
                                         </form>
                                     </div>
                                 </div>
-                            </form>
+                            </div>
                         </div>
-                    </div>
-                </section>
-            </div>
-        </section>
-    </main>
+                    </section>
+                    <section id="info" class="row">
+                        <header class="sctn-hd">
+                            <h2>Info</h2>
+                        </header>
+                        <p>
+                            Google Drive is a file storage and synchronization service developed by Google. Launched on April 24, 2012, Google Drive allows users to store files on their servers, synchronize files across devices, and share files. In addition to a website, Google Drive offers apps with offline capabilities for Windows and macOS computers, and Android and iOS smartphones and tablets. Google Drive encompasses Google Docs, Sheets and Slides, an office suite that permits collaborative editing of documents, spreadsheets, presentations, drawings, forms, and more. Files created and edited through the office suite are saved in Google Drive.
 
-    <script src="scripts/main.js"></script>
-</body>
+                            Google Drive offers users 15 gigabytes of free storage, with 100 gigabytes, 1 terabyte, 2 terabytes, 10 terabytes, 20 terabytes, and 30 terabytes offered through optional paid plans. Files uploaded can be up to 5 terabytes in size. Users can change privacy settings for individual files and folders, including enabling sharing with other users or making content public. On the website, users can search for an image by describing its visuals, and use natural language to find specific files, such as "find my budget spreadsheet from last December".
+
+                            The website and Android app offer a Backups section to see what Android devices have data backed up to the service, and a completely overhauled computer app released in July 2017 allows for backing up specific folders on the user's comp
+                        </p>
+                    </section>
+                    <section id="contact" class="row">
+                        <header class="sctn-hd">
+                            <h2>Contact Us</h2>
+                        </header>
+                        <div class="contact-info">
+                            <p>Cambridge Theatre</p>
+                            <p>Earlham Street, London WC2H 9HU, UK</p>
+                            <a href="https://lwtheatres.co.uk/theatres/cambridge" target="_blank">lwtheatres.co.uk</a>
+                            <a href="tel:+44 20 7087 7745">+44 20 7087 7745</a>
+                        </div>
+                        <div class="map-wrap">
+                            <div id="g-map" class="map"></div>
+                            <iframe class="map" title="Street view of the location"
+                                src="https://www.google.com/maps/embed/v1/streetview?location=51.5138,-0.1269&key=AIzaSyBR2IOk1CVeGcAQgsdRoSW4b1gvEouhvNk"
+                                allowfullscreen>
+                                <p>Your browser does not support iframes.</p>
+                            </iframe>
+                        </div>
+                    </section>
+                    <section id="response" class="row">
+                        <header class="sctn-hd">
+                            <h2>Send Us Feedback</h2>
+                        </header>
+                        <div class="column">
+                            <div class="login">
+                                <div class="wraper">
+                                    <form action="/" method="post">
+                                        <div class="top-row">
+                                            <div class="field-wrap">
+                                                <label>
+                                                    First Name<span class="req">*</span>
+                                                </label>
+                                                <input type="text" required autocomplete="off" />
+                                            </div>
+                                            <div class="field-wrap">
+                                                <label>
+                                                Last Name<span class="req">*</span>
+                                                </label>
+                                                <input type="text"required autocomplete="off"/>
+                                            </div>
+                                        </div>
+                                        <div class="field-wrap">
+                                            <label>
+                                                Email Address<span class="req">*</span>
+                                            </label>
+                                            <input type="email" required autocomplete="off" />
+                                        </div>
+                                        <div class="field-wrap">
+                                            <label for="country-inpt">
+                                                Country<span class="req">*</span>
+                                            </label>
+                                            <input list="country" id="country-inpt" name="country-inpt" />
+                                            <datalist id="country">
+                                                <option value="Afghanistan">
+                                                <option value="Albania">
+                                                <option value="Algeria">
+                                                <option value="American Samoa">
+                                                <option value="Andorra">
+                                                <option value="Angola">
+                                                <option value="Anguilla">
+                                                <option value="Antarctica">
+                                                <option value="Antigua and Barbuda">
+                                                <option value="Argentina">
+                                                <option value="Armenia">
+                                                <option value="Aruba">
+                                                <option value="Australia">
+                                                <option value="Austria">
+                                                <option value="Azerbaijan">
+                                                <option value="Bahamas">
+                                                <option value="Bahrain">
+                                                <option value="Bangladesh">
+                                                <option value="Barbados">
+                                                <option value="Belarus">
+                                                <option value="Belgium">
+                                                <option value="Belize">
+                                                <option value="Benin">
+                                                <option value="Bermuda">
+                                                <option value="Bhutan">
+                                                <option value="Bolivia">
+                                                <option value="Bosnia and Herzegovina">
+                                                <option value="Botswana" >
+                                                <option value="Bouvet Island">
+                                                <option value="Brazil">
+                                                <option value="British Indian Ocean Territory">
+                                                <option value="Brunei Darussalam">
+                                                <option value="Bulgaria" >
+                                                <option value="Burkina Faso">
+                                                <option value="Burundi">
+                                                <option value="Cambodia">
+                                                <option value="Cameroon">
+                                                <option value="Canada">
+                                                <option value="Cape Verde">
+                                                <option value="Cayman Islands">
+                                                <option value="Central African Republic">
+                                                <option value="Chad">
+                                                <option value="Chile">
+                                                <option value="China">
+                                                <option value="Christmas Island">
+                                                <option value="Cocos (Keeling) Islands">
+                                                <option value="Colombia">
+                                                <option value="Comoros">
+                                                <option value="Congo">
+                                                <option value="Congo, The Democratic Republic of The">
+                                                <option value="Cook Islands">
+                                                <option value="Costa Rica">
+                                                <option value="Cote D'ivoire">
+                                                <option value="Croatia">
+                                                <option value="Cuba">
+                                                <option value="Cyprus">
+                                                <option value="Czech Republic">
+                                                <option value="Denmark">
+                                                <option value="Djibouti">
+                                                <option value="Dominica">
+                                                <option value="Dominican Republic">
+                                                <option value="Ecuador">
+                                                <option value="Egypt">
+                                                <option value="El Salvador">
+                                                <option value="Equatorial Guinea">
+                                                <option value="Eritrea">
+                                                <option value="Estonia">
+                                                <option value="Ethiopia">
+                                                <option value="Falkland Islands (Malvinas)">
+                                                <option value="Faroe Islands">
+                                                <option value="Fiji">
+                                                <option value="Finland">
+                                                <option value="France">
+                                                <option value="French Guiana">
+                                                <option value="French Polynesia">
+                                                <option value="French Southern Territories">
+                                                <option value="Gabon">
+                                                <option value="Gambia">
+                                                <option value="Georgia">
+                                                <option value="Germany">
+                                                <option value="Ghana">
+                                                <option value="Gibraltar">
+                                                <option value="Greece">
+                                                <option value="Greenland">
+                                                <option value="Grenada">
+                                                <option value="Guadeloupe">
+                                                <option value="Guam">
+                                                <option value="Guatemala">
+                                                <option value="Guinea">
+                                                <option value="Guinea-bissau">
+                                                <option value="Guyana">
+                                                <option value="Haiti">
+                                                <option value="Heard Island and Mcdonald Islands">
+                                                <option value="Holy See (Vatican City State)">
+                                                <option value="Honduras">
+                                                <option value="Hong Kong">
+                                                <option value="Hungary">
+                                                <option value="Iceland">
+                                                <option value="India">
+                                                <option value="Indonesia">
+                                                <option value="Iran, Islamic Republic of">
+                                                <option value="Iraq">
+                                                <option value="Ireland">
+                                                <option value="Israel">
+                                                <option value="Italy">
+                                                <option value="Jamaica">
+                                                <option value="Japan">
+                                                <option value="Jordan">
+                                                <option value="Kazakhstan">
+                                                <option value="Kenya">
+                                                <option value="Kiribati">
+                                                <option value="Korea, Democratic People's Republic of">
+                                                <option value="Korea, Republic of">
+                                                <option value="Kuwait">
+                                                <option value="Kyrgyzstan">
+                                                <option value="Lao People's Democratic Republic">
+                                                <option value="Latvia">
+                                                <option value="Lebanon">
+                                                <option value="Lesotho">
+                                                <option value="Liberia">
+                                                <option value="Libyan Arab Jamahiriya">
+                                                <option value="Liechtenstein">
+                                                <option value="Lithuania">
+                                                <option value="Luxembourg">
+                                                <option value="Macao">
+                                                <option value="Macedonia, The Former Yugoslav Republic of">
+                                                <option value="Madagascar">
+                                                <option value="Malawi">
+                                                <option value="Malaysia">
+                                                <option value="Maldives">
+                                                <option value="Mali">
+                                                <option value="Malta">
+                                                <option value="Marshall Islands">
+                                                <option value="Martinique">
+                                                <option value="Mauritania">
+                                                <option value="Mauritius">
+                                                <option value="Mayotte">
+                                                <option value="Mexico">
+                                                <option value="Micronesia, Federated States of">
+                                                <option value="Moldova, Republic of">
+                                                <option value="Monaco">
+                                                <option value="Mongolia">
+                                                <option value="Montserrat">
+                                                <option value="Morocco">
+                                                <option value="Mozambique">
+                                                <option value="Myanmar">
+                                                <option value="Namibia">
+                                                <option value="Nauru">
+                                                <option value="Nepal">
+                                                <option value="Netherlands">
+                                                <option value="Netherlands Antilles">
+                                                <option value="New Caledonia">
+                                                <option value="New Zealand">
+                                                <option value="Nicaragua">
+                                                <option value="Niger">
+                                                <option value="Nigeria">
+                                                <option value="Niue">
+                                                <option value="Norfolk Island">
+                                                <option value="Northern Mariana Islands">
+                                                <option value="Norway">
+                                                <option value="Oman">
+                                                <option value="Pakistan">
+                                                <option value="Palau">
+                                                <option value="Palestinian Territory, Occupied">
+                                                <option value="Panama">
+                                                <option value="Papua New Guinea">
+                                                <option value="Paraguay">
+                                                <option value="Peru">
+                                                <option value="Philippines">
+                                                <option value="Pitcairn">
+                                                <option value="Poland">
+                                                <option value="Portugal">
+                                                <option value="Puerto Rico">
+                                                <option value="Qatar">
+                                                <option value="Reunion">
+                                                <option value="Romania">
+                                                <option value="Russian Federation">
+                                                <option value="Rwanda">
+                                                <option value="Saint Helena">
+                                                <option value="Saint Kitts and Nevis">
+                                                <option value="Saint Lucia">
+                                                <option value="Saint Pierre and Miquelon">
+                                                <option value="Saint Vincent and The Grenadines">
+                                                <option value="Samoa">
+                                                <option value="San Marino">
+                                                <option value="Sao Tome and Principe">
+                                                <option value="Saudi Arabia">
+                                                <option value="Senegal">
+                                                <option value="Serbia and Montenegro">
+                                                <option value="Seychelles">
+                                                <option value="Sierra Leone">
+                                                <option value="Singapore">
+                                                <option value="Slovakia">
+                                                <option value="Slovenia">
+                                                <option value="Solomon Islands">
+                                                <option value="Somalia">
+                                                <option value="South Africa">
+                                                <option value="South Georgia and The South Sandwich Islands">
+                                                <option value="Spain">
+                                                <option value="Sri Lanka">
+                                                <option value="Sudan">
+                                                <option value="Suriname">
+                                                <option value="Svalbard and Jan Mayen">
+                                                <option value="Swaziland">
+                                                <option value="Sweden">
+                                                <option value="Switzerland">
+                                                <option value="Syrian Arab Republic">
+                                                <option value="Taiwan, Province of China">
+                                                <option value="Tajikistan">
+                                                <option value="Tanzania, United Republic of">
+                                                <option value="Thailand">
+                                                <option value="Timor-leste">
+                                                <option value="Togo">
+                                                <option value="Tokelau">
+                                                <option value="Tonga">
+                                                <option value="Trinidad and Tobago">
+                                                <option value="Tunisia">
+                                                <option value="Turkey">
+                                                <option value="Turkmenistan">
+                                                <option value="Turks and Caicos Islands">
+                                                <option value="Tuvalu">
+                                                <option value="Uganda">
+                                                <option value="Ukraine">
+                                                <option value="United Arab Emirates">
+                                                <option value="United Kingdom">
+                                                <option value="United States">
+                                                <option value="United States Minor Outlying Islands">
+                                                <option value="Uruguay">
+                                                <option value="Uzbekistan">
+                                                <option value="Vanuatu">
+                                                <option value="Venezuela">
+                                                <option value="Viet Nam">
+                                                <option value="Virgin Islands, British">
+                                                <option value="Virgin Islands, U.S">
+                                                <option value="Wallis and Futuna">
+                                                <option value="Western Sahara">
+                                                <option value="Yemen">
+                                                <option value="Zambia">
+                                                <option value="Zimbabwe">
+                                            </datalist>
+                                        </div>
+                                        <div class="field-wrap">
+                                            <label for="subject">
+                                                Subject<span class="req">*</span>
+                                            </label>
+                                            <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
+                                        </div>
+                                        <button type="submit" class="button button-block">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </main>
+
+        <script src="scripts/DataBase.js"></script>
+        <script src="scripts/MarkUp.js"></script>
+        <script src="scripts/main.js"></script>
+        <script>
+            function initMap() {
+                var uluru = {lat: 51.513667, lng: -0.126629};
+                var map = new google.maps.Map(
+                    document.getElementById('g-map'), {
+                        zoom: 20,
+                        center: uluru
+                    });
+                var marker = new google.maps.Marker({
+                    position: uluru, map: map
+                });
+            }
+        </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBR2IOk1CVeGcAQgsdRoSW4b1gvEouhvNk&callback=initMap">
+        </script>
+    </body>
 </html>

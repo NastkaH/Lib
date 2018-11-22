@@ -6,7 +6,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: @hgt-indent;
+    padding: 0 @hgt-indent @hgt-indent;
 }
 
 .wraper {
@@ -27,7 +27,6 @@
         text-align: center;
         transition: .5s ease;
         border-radius: @unit;
-        font-weight: 500;
         a {
             padding: @indent * 3;
         }
@@ -90,6 +89,7 @@ input {
     width: 100%;
     height: 100%;
     padding: 0.5rem 0.8rem;
+    margin-top: 0.5rem;
     background: none;
     border: 1px solid @item-bg;
     border-radius: @unit;
@@ -153,4 +153,8 @@ input {
             box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.2);
         }
     }
+}
+
+.a {
+    display: none;
 }

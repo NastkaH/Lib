@@ -13,7 +13,7 @@
                         "id": "1bsn1",
                         "name": "The Casual Vacancy",
                         "img": "./media/img/books/casual_vacancy.jpg",
-                        "file": "",
+                        "file": "./media/books/1 - You Dont Know JS - Up and Going.pdf",
                         "year": 2012,
                         "genre": [
                             "Fiction",
@@ -40,7 +40,7 @@
                                 "id": "1bst11",
                                 "name": "Harry Potter and The Philosopher's Stone",
                                 "img": "./media/img/books/hp_1.jpg",
-                                "file": "",
+                                "file": "./media/books/1 - You Dont Know JS - Up and Going.pdf",
                                 "year": 1997,
                                 "about": ""
                             },
@@ -48,7 +48,7 @@
                                 "id": "1bst12",
                                 "name": "Harry Potter and The Chamber of Secrets",
                                 "img": "./media/img/books/hp_2.jpg",
-                                "file": "",
+                                "file": "./media/books/1 - You Dont Know JS - Up and Going.pdf",
                                 "year": 1998,
                                 "about": ""
                             },
@@ -56,7 +56,7 @@
                                 "id": "1bst13",
                                 "name": "Harry Potter and The Prisoner of Azkaban",
                                 "img": "./media/img/books/hp_3.jpg",
-                                "file": "",
+                                "file": "./media/books/1 - You Dont Know JS - Up and Going.pdf",
                                 "year": 1999,
                                 "about": ""
                             },
@@ -64,7 +64,7 @@
                                 "id": "1bst14",
                                 "name": "Harry Potter and The Goblet of Fire",
                                 "img": "./media/img/books/hp_4.jpg",
-                                "file": "",
+                                "file": "./media/books/1 - You Dont Know JS - Up and Going.pdf",
                                 "year": 2000,
                                 "about": ""
                             },
@@ -72,7 +72,7 @@
                                 "id": "1bst15",
                                 "name": "Harry Potter and The Order of the Phoenix",
                                 "img": "./media/img/books/hp_5.jpg",
-                                "file": "",
+                                "file": "./media/books/1 - You Dont Know JS - Up and Going.pdf",
                                 "year": 2003,
                                 "about": ""
                             },
@@ -80,7 +80,7 @@
                                 "id": "1bst16",
                                 "name": "Harry Potter and The Half-Blood Prince",
                                 "img": "./media/img/books/hp_6.jpg",
-                                "file": "",
+                                "file": "./media/books/1 - You Dont Know JS - Up and Going.pdf",
                                 "year": 2005,
                                 "about": ""
                             },
@@ -88,7 +88,7 @@
                                 "id": "1bst17",
                                 "name": "Harry Potter and The Deathly Hallows",
                                 "img": "./media/img/books/hp_7.jpg",
-                                "file": "",
+                                "file": "./media/books/1 - You Dont Know JS - Up and Going.pdf",
                                 "year": 2007,
                                 "about": ""
                             }
@@ -110,7 +110,7 @@
                         "id": "2bsn1",
                         "name": "Fahrenheit 451",
                         "img": "./media/img/books/fahrenheit.jpg",
-                        "file": "",
+                        "file": "./media/books/1 - You Dont Know JS - Up and Going.pdf",
                         "year": 1953,
                         "genre": [
                             "Dystopia",
@@ -122,7 +122,7 @@
                         "id": "2bsn2",
                         "name": "The Martian Chronicles",
                         "img": "./media/img/books/martianchronicles.jpg",
-                        "file": "",
+                        "file": "./media/books/1 - You Dont Know JS - Up and Going.pdf",
                         "year": 1950,
                         "genre": [
                             "Dystopia",
@@ -137,7 +137,7 @@
                         "id": "2bsn3",
                         "name": "The Illustrated Man",
                         "img": "./media/img/books/illustrated.jpg",
-                        "file": "",
+                        "file": "./media/books/1 - You Dont Know JS - Up and Going.pdf",
                         "year": 1951,
                         "genre": [
                             "Sci-Fi"
@@ -148,7 +148,7 @@
                         "id": "2bsn4",
                         "name": "I Sing the Body Electric",
                         "img": "./media/img/books/stories.jpg",
-                        "file": "",
+                        "file": "./media/books/1 - You Dont Know JS - Up and Going.pdf",
                         "year": 1969,
                         "genre": [
                             "Sci-Fi",
@@ -172,7 +172,7 @@
                         "id": "3bsn1",
                         "name": "With Morning Comes Mistfall",
                         "img": "./media/img/quest_mark.svg",
-                        "file": "",
+                        "file": "./media/books/1 - You Dont Know JS - Up and Going.pdf",
                         "year": 1973,
                         "genre": [
                             "Fantasy Fiction",
@@ -184,7 +184,7 @@
                         "id": "3bsn2",
                         "name": "Dying of the Light",
                         "img": "./media/img/quest_mark.svg",
-                        "file": "",
+                        "file": "./media/books/1 - You Dont Know JS - Up and Going.pdf",
                         "year": 1977,
                         "genre": [
                             "Sci-Fi"
@@ -206,7 +206,7 @@
                                 "id": "3bst11",
                                 "name": "A Game of Thrones",
                                 "img": "./media/img/books/gt_1.jpg",
-                                "file": "",
+                                "file": "./media/books/1 - You Dont Know JS - Up and Going.pdf",
                                 "year": 1996,
                                 "about": ""
                             },
@@ -214,7 +214,7 @@
                                 "id": "3bst12",
                                 "name": "A Clash of Kings",
                                 "img": "./media/img/books/gt_2.jpg",
-                                "file": "",
+                                "file": "./media/books/1 - You Dont Know JS - Up and Going.pdf",
                                 "year": 1998,
                                 "about": ""
                             },
@@ -222,7 +222,7 @@
                                 "id": "3bst13",
                                 "name": "A Storm of Swords",
                                 "img": "./media/img/books/gt_3.jpg",
-                                "file": "",
+                                "file": "./media/books/1 - You Dont Know JS - Up and Going.pdf",
                                 "year": 2000,
                                 "about": ""
                             },
@@ -230,7 +230,7 @@
                                 "id": "3bst14",
                                 "name": "A Feast for Crows",
                                 "img": "./media/img/books/gt_4.jpg",
-                                "file": "",
+                                "file": "./media/books/1 - You Dont Know JS - Up and Going.pdf",
                                 "year": 2005,
                                 "about": ""
                             },
@@ -238,7 +238,7 @@
                                 "id": "3bst15",
                                 "name": "A Dance with Dragons",
                                 "img": "./media/img/books/gt_5.jpg",
-                                "file": "",
+                                "file": "./media/books/1 - You Dont Know JS - Up and Going.pdf",
                                 "year": 2011,
                                 "about": ""
                             },
@@ -246,7 +246,7 @@
                                 "id": "3bst16",
                                 "name": "The Winds of Winter",
                                 "img": "./media/img/books/gt_6.jpg",
-                                "file": "",
+                                "file": "./media/books/1 - You Dont Know JS - Up and Going.pdf",
                                 "year": "forthcoming",
                                 "about": ""
                             },
@@ -254,7 +254,7 @@
                                 "id": "3bst17",
                                 "name": "A Dream of Spring",
                                 "img": "./media/img/books/gt_7.jpg",
-                                "file": "",
+                                "file": "./media/books/1 - You Dont Know JS - Up and Going.pdf",
                                 "year": "forthcoming",
                                 "about": ""
                             }
@@ -276,7 +276,7 @@
                         "id": "4bsn1",
                         "name": "The Handmaid's Tale",
                         "img": "./media/img/books/ht.jpg",
-                        "file": "",
+                        "file": "./media/books/1 - You Dont Know JS - Up and Going.pdf",
                         "year": 1985,
                         "genre": [
                             "Dystopia",
@@ -289,7 +289,7 @@
                         "id": "4bsn2",
                         "name": "The Blind Assassin",
                         "img": "./media/img/books/cat.jpg",
-                        "file": "",
+                        "file": "./media/books/1 - You Dont Know JS - Up and Going.pdf",
                         "year": 1988,
                         "genre": [
                             "Novel"
@@ -501,7 +501,7 @@
                     {
                         "id": "1vsn1",
                         "name": "Claire Foy - Interview (FULL)",
-                        "img": "./media/video/crown.jpg",
+                        "img": "https://www.whats-on-netflix.com/wp-content/uploads/2018/10/The-Crown-Season-3-Everything-We-Know-So-Far.jpg",
                         "file": "./media/video/The Crown's Claire Foy (Full Interview) - Chelsea - Netflix.mp4",
                         "year": 2017,
                         "genre": [
