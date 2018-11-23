@@ -13,7 +13,7 @@
 
             let index = value.indexOf('3000/');
             let id = value.slice(index + 5);
-            let row = this.addElement('section', {id: `${id}`, class: 'row'},
+            let row = this.addElement('section', {id: `${id}`, class: 'row v'},
                 this.addElement('header', {class: 'sctn-hd'},
                     this.addElement('h1', {}, `${id}`)
                 )
@@ -49,7 +49,11 @@
         createElMarkUp(item, objName) {
             let el = this.thumbMarkUp(item, objName);
             el.addEventListener('click', () => {
+                let currentSec = document.querySelectorAll('.show');
+                currentSec[0].classList.toggle('show');
                 this.createDetailedPage(item, objName);
+                let detPage = document.getElementById('detPage');
+                detPage.classList.add('show');
             });
             return el;
         }
@@ -74,10 +78,9 @@
         }
 
         createDetailedPage(item, objName) {
-            'use strict';
             let section = document.querySelector('[data-role="generate-det-pg"]');
 
-            let el = this.addElement('div', {id: 'detPage', class: 'page-wrap'},
+            let el = this.addElement('div', {class: 'page-wrap'},
             this.addElement('section', {class: 'hd-wrap'},
             this.addElement('div', {class: 'img-wrap'},
             this.addElement('img', {src: `${item.img}`, alt: `${item.name}`, class: 'det-img'})
@@ -185,26 +188,61 @@
             });
         }
 
-        manageContent(arr) {
-            arr.forEach(item => {
-                let triggers = document.querySelectorAll(item[0]);
-                this.showElsOnTrigger(triggers, item[1]);
+        defaultPage(hash) {
+            window.location.hash = hash;
+            let triggers = document.querySelectorAll('[data-role="triger"]');
+            let t = [...triggers].find(triger => {
+                return triger.dataset.hash === hash;
             });
+            if (!t.getAttribute('class')) {
+                t.className = 'active';
+            } else {
+                t.classList.add('active');
+            }
+            document.querySelector(hash).classList.add('show');
+        }
+
+        manageContent() {
+            this.showElsOnHash();
+            this.showElsOnTrigger();
             this.hideAside();
         }
 
-        showElsOnTrigger(arr, name) {
-            Array.prototype.forEach.call(arr, trigger => {
-                trigger.addEventListener('click', () => {
-                    let href = trigger.querySelector('a').href;
-                    let id = href.substr(href.lastIndexOf('#') + 1);
-                    let el = document.getElementById(id);
+        showElsOnHash() {
+            let oldUrl;
+            oldUrl = window.location.hash;
+            window.addEventListener('hashchange', () => {
+                let hideEl = document.getElementById(oldUrl.substr(1));
+                let showEl = document.getElementById(window.location.hash.substr(1));
 
-                    let current = document.getElementsByClassName(name);
-                    current[0].classList.toggle(name);
-                    el.classList.add(name);
+                document.querySelector('main').scrollTop = 0;
 
-                    this.setToActive(trigger);
+                hideEl.classList.remove('show');
+                showEl.classList.add('show');
+                oldUrl = window.location.hash;
+
+                let triggers = document.querySelectorAll('[data-role="triger"]');
+                let t = [...triggers].find(triger => {
+                    return triger.dataset.hash === window.location.hash;
+                });
+
+                this.setToActive(t);
+            });
+        }
+
+        showElsOnTrigger() {
+            let arr = document.getElementsByClassName('tab-button');
+
+            Array.prototype.forEach.call(arr, button => {
+                button.addEventListener('click', () => {
+                    let href = button.dataset.href;
+                    let el = document.getElementById(href);
+
+                    let hideEl = document.querySelector('.show-l');
+                    hideEl.classList.remove('show-l');
+                    el.classList.add('show-l');
+
+                    this.setToActive(button);
                 });
             });
         }

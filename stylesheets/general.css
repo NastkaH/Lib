@@ -5,9 +5,6 @@
 .hide {
   display: none;
 }
-.row {
-  display: none;
-}
 .show {
   display: flex;
 }
@@ -92,9 +89,12 @@ textarea:focus {
   margin: auto;
 }
 .row {
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   justify-content: center;
+}
+.vc {
+  display: none;
 }
 a {
   display: block;

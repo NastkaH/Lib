@@ -20,12 +20,12 @@
     <body>
         <header class="mn-hd">
             <div>
-                <div id="burger" class="other-ico">
-                        <a href="#menu">
+                <div id="burger" class="burger-ico">
+                        <div>
                             <img src="media/img/menu.svg" alt="menu" />
-                        </a>
+                        </div>
                 </div>
-                <div class="logo-ico active" data-role="triger">
+                <div class="logo-ico" data-role="triger" data-hash="#home">
                     <a href="#home">
                         <img src="media/img/cloud-computing.svg" alt="logo" />
                         <!-- <span>Buble</span> -->
@@ -40,12 +40,12 @@
                         </div>
                     </form>
                 </div>
-                <div class="other-ico" data-role="triger">
+                <div class="other-ico" data-role="triger" data-hash="#upload">
                     <a href="#upload">
                         <img src="media/img/cloud-upload.svg" alt="search" />
                     </a>
                 </div>
-                <div class="other-ico" data-role="triger">
+                <div class="other-ico" data-role="triger" data-hash="#logform">
                     <a href="#logform">
                         <img src="media/img/user-black.svg" alt="login" />
                     </a>
@@ -54,29 +54,37 @@
         </header>
 
         <main data-scroll="trigger">
-            <aside class="sb">
+            <aside class="sb" data-visible="target">
                 <nav class="sb-ls">
                     <ul>
     <!--                     <li id="defaultNav" class="sb-ls-it active" role="menuitem" data-role="active" data-show="triger"><a class="sb-ls-ln" href="#home">
                             <img class="nav-ico" src="media/img/cloud-computing.svg" alt="logo">
                             <span>Home</span>
                         </a></li> -->
-                        <li class="sb-ls-it" role="menuitem" data-role="triger"><a class="sb-ls-ln" href="#books">
-                            <img class="nav-ico" src="media/img/cloud-book.svg" alt="book">
-                            <span>Books</span>
-                        </a></li>
-                        <li class="sb-ls-it" role="menuitem" data-role="triger"><a class="sb-ls-ln" href="#audios">
-                            <img class="nav-ico" src="media/img/cloud-music.svg" alt="audio">
-                            <span>Audio </span>
-                        </a></li>
-                        <li class="sb-ls-it" role="menuitem" data-role="triger"><a class="sb-ls-ln" href="#videos">
-                            <img class="nav-ico" src="media/img/cloud-img.svg" alt="photo">
-                            <span>Video</span>
-                        </a></li>
-                        <li class="sb-ls-it" role="menuitem" data-role="triger"><a class="sb-ls-ln" href="#photos">
-                            <img class="nav-ico" src="media/img/cloud-img.svg" alt="photo">
-                            <span>Photo</span>
-                        </a></li>
+                        <li class="sb-ls-it" role="menuitem" data-role="triger" data-hash="#books">
+                            <a class="sb-ls-ln" href="#books">
+                                <img class="nav-ico" src="media/img/cloud-book.svg" alt="book">
+                                <span>Books</span>
+                            </a>
+                        </li>
+                        <li class="sb-ls-it" role="menuitem" data-role="triger" data-hash="#audios">
+                            <a class="sb-ls-ln" href="#audios">
+                                <img class="nav-ico" src="media/img/cloud-music.svg" alt="audio">
+                                <span>Audio </span>
+                            </a>
+                        </li>
+                        <li class="sb-ls-it" role="menuitem" data-role="triger" data-hash="#videos">
+                            <a class="sb-ls-ln" href="#videos">
+                                <img class="nav-ico" src="media/img/cloud-img.svg" alt="photo">
+                                <span>Video</span>
+                            </a>
+                        </li>
+                        <li class="sb-ls-it" role="menuitem" data-role="triger" data-hash="#photos">
+                            <a class="sb-ls-ln" href="#photos">
+                                <img class="nav-ico" src="media/img/cloud-img.svg" alt="photo">
+                                <span>Photo</span>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
                 <ul class="sb-ls">
@@ -151,15 +159,15 @@
                     </a></li>
                 </ul>
                 <ul class="sb-ls">
-                    <li class="sb-ls-it" role="menuitem" data-role="triger"><a class="sb-ls-ln" href="#info">
+                    <li class="sb-ls-it" role="menuitem" data-role="triger" data-hash="#info"><a class="sb-ls-ln" href="#info">
                         <img class="nav-ico" src="media/img/info.svg" alt="next">
                         <span>Info</span>
                     </a></li>
-                    <li class="sb-ls-it" role="menuitem" data-role="triger"><a class="sb-ls-ln" href="#contact">
+                    <li class="sb-ls-it" role="menuitem" data-role="triger" data-hash="#contact"><a class="sb-ls-ln" href="#contact">
                         <img class="nav-ico" src="media/img/worldwide.svg" alt="contact">
                         <span>Contact</span>
                     </a></li>
-                    <li class="sb-ls-it" role="menuitem" data-role="triger"><a class="sb-ls-ln" href="#response">
+                    <li class="sb-ls-it" role="menuitem" data-role="triger" data-hash="#response"><a class="sb-ls-ln" href="#response">
                         <img class="nav-ico" src="media/img/email.svg" alt="next">
                         <span>Send feedback</span>
                     </a></li>
@@ -171,9 +179,9 @@
             </aside>
             <section class="container">
                 <div class="mrg-auto" data-role="generate">
-                    <section id="detPage" data-role="generate-det-pg">
+                    <section id="detPage" class="row" data-role="generate-det-pg">
                     </section>
-                    <section id="home" class="row show">
+                    <section id="home" class="row">
                         <header class="sctn-hd">
                             <h1>Library</h1>
                         </header>
@@ -207,18 +215,18 @@
                             <div class="files-wrap"></div>
                         </div>
                     </section>
-                    <section id="logform" class="row">
+                    <section id="logform" class="row v">
                         <header class="sctn-hd">
                             <h2>Register or Login</h2>
                         </header>
                         <div class="login">
                             <div class="wraper">
-                                <ul class="tab-group">
-                                    <li id="defaultLog" class="tab active" data-role="log-triger" ><a href="#signup">Sign Up</a></li>
-                                    <li class="tab" data-role="log-triger" ><a href="#login">Log In</a></li>
-                                </ul>
+                                <div class="tab-group">
+                                    <button class="tab-button active" data-href="signup" data-role="log-triger">Sign Up</button>
+                                    <button class="tab-button" data-href="login" data-role="log-triger">Log In</button>
+                                </div>
                                 <div class="tab-content">
-                                    <div id="signup" class="a show-l">
+                                    <div id="signup" class="vc show-l">
                                         <form action="/" method="post">
                                             <div class="top-row">
                                                 <div class="field-wrap">
@@ -265,7 +273,7 @@
                                             </a>
                                         </div>
                                     </div>
-                                    <div id="login" class="a">
+                                    <div id="login" class="vc">
                                         <form action="/" method="post">
                                             <div class="field-wrap">
                                                 <label>

@@ -5,9 +5,6 @@
 .hide {
   display: none;
 }
-.row {
-  display: none;
-}
 .show {
   display: flex;
 }
@@ -47,27 +44,21 @@
   padding: 4rem 8rem;
 }
 .tab-group {
+  display: flex;
   padding-bottom: 4rem;
 }
-.tab-group .tab {
-  float: left;
-  width: 50%;
+.tab-button {
+  flex: 1;
   font-size: 2rem;
   letter-spacing: 0.1em;
   text-align: center;
+  padding: 1.5rem;
+  background-color: #e6e6e6;
   transition: 0.5s ease;
   border-radius: 0.2rem;
 }
-.tab-group .tab a {
-  padding: 1.5rem;
-}
-.tab-group .tab:hover {
+.tab-button:hover {
   background: rgba(120, 199, 123, 0.719);
-}
-.tab-group:after {
-  content: "";
-  display: table;
-  clear: both;
 }
 .top-row > div {
   float: left;
@@ -161,7 +152,4 @@ input:focus {
 }
 .login-item img:hover {
   box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.2);
-}
-.a {
-  display: none;
 }

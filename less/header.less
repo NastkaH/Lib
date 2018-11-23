@@ -33,7 +33,21 @@
     .ico-holder(@ico-hgt);
 }
 
-.logo-ico:hover, .other-ico:hover {
+.burger-ico {
+    border-radius: 50%;
+    transition:.5s ease;
+    cursor: pointer;
+
+    div {
+        height: @header-hgt;
+        padding: calc((@header-hgt - @ico-hgt) / 2);
+        & > img {
+            height: @ico-hgt;
+        }
+    }
+}
+
+.logo-ico:hover, .other-ico:hover, .burger-ico:hover {
     .hover();
 }
 

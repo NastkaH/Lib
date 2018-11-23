@@ -12,9 +12,24 @@
     let pages = new Page(db, new MarkUp());
 
     (function () {
+        window.onload = () => {
+            if (!localStorage.getItem('last_load_page')) {
+                pages.defaultPage('#home');
+            } else {
+                pages.defaultPage(localStorage.getItem('last_load_page'));
+            }
+        };
+
         pages.loadJSON();
-        pages.manageContent([['[data-role="triger"]', 'show'], ['[data-role="log-triger"]', 'show-l']]);
+        pages.manageContent();
         pages.shadowOnScroll();
+
+        window.onbeforeunload = () => {
+            if (localStorage.getItem('last_load_page')) {
+                localStorage.removeItem('last_load_page');
+            }
+            localStorage.setItem('last_load_page', window.location.hash);
+        };
     })();
 
     /* So that we can interact with the instance of Page, we export it to the global namespace. */

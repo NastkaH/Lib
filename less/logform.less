@@ -17,29 +17,22 @@
 }
 
 .tab-group {
-    padding-bottom: @hgt-indent;
+    display: flex;
+    padding-bottom: 4rem;
+}
 
-    .tab {
-        float: left;
-        width: 50%;
-        font-size: @body-fsize + 0.4;
-        letter-spacing: .1em;
-        text-align: center;
-        transition: .5s ease;
-        border-radius: @unit;
-        a {
-            padding: @indent * 3;
-        }
+.tab-button {
+    flex: 1;
+    font-size: @body-fsize + 0.4;
+    letter-spacing: .1em;
+    text-align: center;
+    padding: @indent * 3;
+    background-color: @item-bg;
+    transition: .5s ease;
+    border-radius: @unit;
 
-        &:hover {
-            background: @hover-color;
-        }
-    }
-
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
+    &:hover {
+        background: @hover-color;
     }
 }
 
@@ -153,8 +146,4 @@ input {
             box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.2);
         }
     }
-}
-
-.a {
-    display: none;
 }
