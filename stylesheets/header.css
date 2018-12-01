@@ -1,3 +1,4 @@
+/* MEDIA QUERY */
 /* HEADER */
 /* ASIDE */
 /* LOGFORM */
@@ -36,6 +37,8 @@
   padding: 1rem 1rem;
   transition: box-shadow 0.2s;
   z-index: 2;
+  max-width: 1530px;
+  margin: auto;
 }
 .mn-hd > div {
   margin: auto 0;

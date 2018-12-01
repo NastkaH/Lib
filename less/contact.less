@@ -1,0 +1,62 @@
+@import "variables.less";
+
+.contact-info, .map-wrap {
+    width: 100%;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.adress {
+    margin: 0 @2indent 20px;
+    padding: @2indent @2indent + 0.5;
+
+    background-color: @white;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.2), 0 1px 5px 0 rgba(0,0,0,0.12);
+    border-radius: @unit;
+
+    p, a {
+        font-size: @body-fsize + 0.1;
+        letter-spacing: @l-space;
+        white-space: nowrap;
+    }
+
+    & > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: calc(100% - 36px);
+    }
+}
+
+.col-cont, .col-cont + .adress {
+    flex: 1;
+}
+
+.sub-hd {
+    text-align: center;
+    padding-bottom: @2indent;
+    h3 {
+        font-weight: 500;
+        letter-spacing: @l-space;
+        font-size: @body-fsize + 0.3;
+    }
+}
+
+.map-wrap {
+    margin: 0 @2indent 20px;
+    padding: @2indent  @2indent + 0.5;
+
+    background-color: @white;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.2), 0 1px 5px 0 rgba(0,0,0,0.12);
+    border-radius: @unit;
+}
+
+.map {
+    width: 100%;
+    height: 300px;
+    background-color: grey;
+}

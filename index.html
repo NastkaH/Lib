@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -57,10 +57,6 @@
             <aside class="sb" data-visible="target">
                 <nav class="sb-ls">
                     <ul>
-    <!--                     <li id="defaultNav" class="sb-ls-it active" role="menuitem" data-role="active" data-show="triger"><a class="sb-ls-ln" href="#home">
-                            <img class="nav-ico" src="media/img/cloud-computing.svg" alt="logo">
-                            <span>Home</span>
-                        </a></li> -->
                         <li class="sb-ls-it" role="menuitem" data-role="triger" data-hash="#books">
                             <a class="sb-ls-ln" href="#books">
                                 <img class="nav-ico" src="media/img/cloud-book.svg" alt="book">
@@ -159,10 +155,6 @@
                     </a></li>
                 </ul>
                 <ul class="sb-ls">
-                    <li class="sb-ls-it" role="menuitem" data-role="triger" data-hash="#info"><a class="sb-ls-ln" href="#info">
-                        <img class="nav-ico" src="media/img/info.svg" alt="next">
-                        <span>Info</span>
-                    </a></li>
                     <li class="sb-ls-it" role="menuitem" data-role="triger" data-hash="#contact"><a class="sb-ls-ln" href="#contact">
                         <img class="nav-ico" src="media/img/worldwide.svg" alt="contact">
                         <span>Contact</span>
@@ -295,36 +287,46 @@
                             </div>
                         </div>
                     </section>
-                    <section id="info" class="row">
-                        <header class="sctn-hd">
-                            <h2>Info</h2>
-                        </header>
-                        <p>
-                            Google Drive is a file storage and synchronization service developed by Google. Launched on April 24, 2012, Google Drive allows users to store files on their servers, synchronize files across devices, and share files. In addition to a website, Google Drive offers apps with offline capabilities for Windows and macOS computers, and Android and iOS smartphones and tablets. Google Drive encompasses Google Docs, Sheets and Slides, an office suite that permits collaborative editing of documents, spreadsheets, presentations, drawings, forms, and more. Files created and edited through the office suite are saved in Google Drive.
-
-                            Google Drive offers users 15 gigabytes of free storage, with 100 gigabytes, 1 terabyte, 2 terabytes, 10 terabytes, 20 terabytes, and 30 terabytes offered through optional paid plans. Files uploaded can be up to 5 terabytes in size. Users can change privacy settings for individual files and folders, including enabling sharing with other users or making content public. On the website, users can search for an image by describing its visuals, and use natural language to find specific files, such as "find my budget spreadsheet from last December".
-
-                            The website and Android app offer a Backups section to see what Android devices have data backed up to the service, and a completely overhauled computer app released in July 2017 allows for backing up specific folders on the user's comp
-                        </p>
-                    </section>
                     <section id="contact" class="row">
                         <header class="sctn-hd">
                             <h2>Contact Us</h2>
                         </header>
-                        <div class="contact-info">
-                            <p>Cambridge Theatre</p>
-                            <p>Earlham Street, London WC2H 9HU, UK</p>
-                            <a href="https://lwtheatres.co.uk/theatres/cambridge" target="_blank">lwtheatres.co.uk</a>
-                            <a href="tel:+44 20 7087 7745">+44 20 7087 7745</a>
-                        </div>
-                        <div class="map-wrap">
+                        <section class="contact-info">
+                            <div class="col-cont">
+                                <div class="adress">
+                                        <header class="sub-hd">
+                                            <h3>Website</h3>
+                                        </header>
+                                        <div>
+                                            <a href="https://lwtheatres.co.uk/theatres/cambridge" target="_blank">lwtheatres.co.uk</a>
+                                        </div>
+                                </div>
+                                <div class="adress">
+                                    <header class="sub-hd">
+                                        <h3>Telephone</h3>
+                                    </header>
+                                    <div>
+                                        <a href="tel:+442070877745">(+44)20-7087-7745</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="adress">
+                                <header class="sub-hd">
+                                    <h3>Adress</h3>
+                                </header>
+                                <div>
+                                    <p>Cambridge Theatre</p>
+                                    <p>Earlham Street</p>
+                                    <p>London, UK</p>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="map-wrap">
+                            <header class="sub-hd">
+                                <h3>Find Us On Map</h3>
+                            </header>
                             <div id="g-map" class="map"></div>
-                            <iframe class="map" title="Street view of the location"
-                                src="https://www.google.com/maps/embed/v1/streetview?location=51.5138,-0.1269&key=AIzaSyBR2IOk1CVeGcAQgsdRoSW4b1gvEouhvNk"
-                                allowfullscreen>
-                                <p>Your browser does not support iframes.</p>
-                            </iframe>
-                        </div>
+                        </section>
                     </section>
                     <section id="response" class="row">
                         <header class="sctn-hd">
@@ -625,7 +627,7 @@
                 var uluru = {lat: 51.513667, lng: -0.126629};
                 var map = new google.maps.Map(
                     document.getElementById('g-map'), {
-                        zoom: 20,
+                        zoom: 18,
                         center: uluru
                     });
                 var marker = new google.maps.Marker({

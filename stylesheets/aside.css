@@ -1,3 +1,4 @@
+/* MEDIA QUERY */
 /* HEADER */
 /* ASIDE */
 /* LOGFORM */
@@ -34,14 +35,15 @@
   left: 0;
   top: 7.4rem;
   height: calc(100% - 7.4rem);
-  width: 28rem;
   overflow: hidden;
   background-color: #ffffff;
   z-index: 1;
-  /* will always stay on top */
   visibility: visible;
   transform: translateX(0);
   transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0s;
+}
+.sb-ls {
+  width: 26.3rem;
 }
 .sb-ls-hd {
   color: #595959;
@@ -77,7 +79,10 @@
   border-bottom: 1px solid #ddd;
 }
 .sb:hover {
-  overflow-y: auto;
+  overflow-y: visible;
+}
+.sb nav.sb-ls .sb-ls-it:first-child {
+  margin-top: 0;
 }
 /* .sb-ls-ln  span {
     padding: calc((@hgt-indent - @link-hgt) / 2) 0;
@@ -95,7 +100,4 @@
   color: rgba(0, 0, 0, 0.54);
   padding: 2px 5px;
   white-space: nowrap;
-}
-@media only screen and (max-width: 768px) {
-  /*  and (max-width : 1024px) */
 }

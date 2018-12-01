@@ -1,0 +1,38 @@
+@import 'variables.less';
+
+@media only screen {
+    /* iPad Pro, Tablets and Phone (portrait and landscape)----------- */
+    @media @ipad_pro, @tablet_phone {
+        .sb {
+            box-shadow: 2px 3px 7px -1px rgba(0,0,0,0.45);
+            border-top-right-radius: 25px;
+        }
+    }
+
+    @media @phone {
+        .el-wrap {
+            flex: 1 20rem;
+            width: 20rem;
+        }
+
+        .info-wrap {
+            a {
+                max-width: 75rem;
+            }
+        }
+
+        .au > a,  .b > a , .thumb-wrap > a{
+            height: auto;
+        }
+    }
+
+    /* Desktops and laptops, Landscape ----------- */
+
+    /* @media only screen and (min-width: 1024px) and (orientation: landscape) {
+        .mrg-auto {
+            width: 80%;
+            margin: auto;
+        }
+    } */
+}
+

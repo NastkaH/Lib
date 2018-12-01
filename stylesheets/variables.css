@@ -1,11 +1,9 @@
+/* MEDIA QUERY */
 /* HEADER */
 /* ASIDE */
 /* LOGFORM */
 /* MIXIN */
 .hide {
-  display: none;
-}
-.row {
   display: none;
 }
 .show {

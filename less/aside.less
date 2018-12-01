@@ -4,16 +4,17 @@
     position: fixed;
     left: 0;
     .fixed-top();
-    width: @sb-width;
     overflow: hidden;
     background-color: @white;
 
-    z-index: 1; /* will always stay on top */
+    z-index: 1;
     visibility: visible;
     transform: translateX(0);
     transition: transform .25s cubic-bezier(0.4,0.0,0.2,1), visibility 0s linear 0s;
 
     &-ls {
+        width: @sb-width;
+
         &-hd {
             color: @aside-hd;
             font-family: @aux-f-fam;
@@ -56,7 +57,13 @@
     }
 
     &:hover {
-        overflow-y: auto;
+        overflow-y: visible;
+    }
+
+    nav.sb-ls {
+        .sb-ls-it:first-child {
+            margin-top: 0;
+        }
     }
 }
 
@@ -79,7 +86,4 @@
     color: rgba(0,0,0,.54);
     padding: 2px 5px;
     white-space: nowrap;
-}
-
-@media only screen and (max-width : 768px)/*  and (max-width : 1024px) */ {
 }

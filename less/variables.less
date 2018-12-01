@@ -23,6 +23,15 @@
 @shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
 @brd: 1px solid #ddd;
 
+
+
+/* MEDIA QUERY */
+@tablet_phone: ~"(max-width: 1024px)";
+@phone: ~"(max-width: 767px)";
+@ipad_pro: ~"(min-width: 1024px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5)";
+
+
+
 /* HEADER */
 
 @header-hgt: 5.4rem;
@@ -52,7 +61,7 @@
 @aside-hd-fs: @body-fsize - .5;
 @aside-hd: lighten(@black, 35%);
 
-@sb-width: 28rem;
+@sb-width: 28rem - 1.7rem;
 
 
 /* LOGFORM */

@@ -18,6 +18,7 @@
             } else {
                 pages.defaultPage(localStorage.getItem('last_load_page'));
             }
+            /* pages.defaultPage('#home'); */
         };
 
         pages.loadJSON();

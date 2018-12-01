@@ -43,44 +43,55 @@
                 });
             }
 
+            if (id == 'audios') {
+                let th = row.getElementsByClassName('thumb-wrap');
+                Array.prototype.forEach.call(th, i => {
+                    i.classList.add('au');
+                });
+            }
+
             section.appendChild(row);
         }
 
         createElMarkUp(item, objName) {
             let el = this.thumbMarkUp(item, objName);
-            el.addEventListener('click', () => {
+            /* el.addEventListener('click', () => {
                 let currentSec = document.querySelectorAll('.show');
                 currentSec[0].classList.toggle('show');
+
                 this.createDetailedPage(item, objName);
                 let detPage = document.getElementById('detPage');
-                detPage.classList.add('show');
-            });
+                let id = `s${item.id}`;
+                let e = document.getElementById(id);
+                e.classList.toggle('show');
+            }); */
             return el;
         }
 
         thumbMarkUp(item, objName) {
             let el = this.addElement('div', {id: `${item.id}`, class: 'el-wrap'},
-            this.addElement('div', {class: 'thumb-wrap'},
-            this.addElement('a', {href: '#detPage'},
-            this.addElement('img', {src: `${item.img}`, alt: `${item.name}`, class: 'thumb-img'})
+                this.addElement('div', {class: 'thumb-wrap'},
+                    this.addElement('a', {href: `#s${item.id}`},
+                        this.addElement('img', {src: `${item.img}`, alt: `${item.name}`, class: 'thumb-img'})
                     )
                 ),
                 this.addElement('div', {class: 'info-wrap'},
-                this.addElement('h2', {},
-                this.addElement('a', {href: '#detPage'}, `${item.name}`)
+                    this.addElement('h2', {},
+                        this.addElement('a', {href: `#s${item.id}`}, `${item.name}`),
+                        this.addElement('span', {class: 'tooltip'}, `${item.name}`)
                     ),
                     this.addElement('p', {},
-                    this.addElement('a', {href: '#'}, `${objName}`)
+                        this.addElement('a', {href: '#'}, `${objName}`)
                     )
                 )
             );
             return el;
         }
 
-        createDetailedPage(item, objName) {
+        /* createDetailedPage(item, objName) {
             let section = document.querySelector('[data-role="generate-det-pg"]');
 
-            let el = this.addElement('div', {class: 'page-wrap'},
+            let el = this.addElement('div', {id: `s${item.id}`,class: 'page-wrap'},
             this.addElement('section', {class: 'hd-wrap'},
             this.addElement('div', {class: 'img-wrap'},
             this.addElement('img', {src: `${item.img}`, alt: `${item.name}`, class: 'det-img'})
@@ -99,14 +110,14 @@
         /*             addElement('div', {},
                         addElement('a', {href: '#'}, 'Download file')
                     ), */
-                    this.addElement('div', {},
+          /*           this.addElement('div', {},
                     this.addElement('a', {href: `${item.file}`, target: '_blank'}, 'Open file')
                     )
                 )
             );
 
             section.appendChild(el);
-        }
+        } */
 
         createAudioMarkUp(item, objName, wrapClass) {
         /*     let el = addElement('div', {id: `${item.id}`, class: 'el-wrap-a'},
@@ -149,7 +160,6 @@
         }
 
         addElement(title, attributes) {
-            'use strict';
 
             let args = arguments;
             let length = args.length;
@@ -194,11 +204,13 @@
             let t = [...triggers].find(triger => {
                 return triger.dataset.hash === hash;
             });
+
             if (!t.getAttribute('class')) {
                 t.className = 'active';
             } else {
                 t.classList.add('active');
             }
+
             document.querySelector(hash).classList.add('show');
         }
 
@@ -214,19 +226,31 @@
             window.addEventListener('hashchange', () => {
                 let hideEl = document.getElementById(oldUrl.substr(1));
                 let showEl = document.getElementById(window.location.hash.substr(1));
-
                 document.querySelector('main').scrollTop = 0;
 
-                hideEl.classList.remove('show');
-                showEl.classList.add('show');
-                oldUrl = window.location.hash;
+
+                if (performance.navigation.type == 1) {
+                    showEl.classList.add('show');
+                    oldUrl = window.location.hash;
+                } else {
+                    hideEl.classList.remove('show');
+                    showEl.classList.add('show');
+                    oldUrl = window.location.hash;
+                }
 
                 let triggers = document.querySelectorAll('[data-role="triger"]');
                 let t = [...triggers].find(triger => {
                     return triger.dataset.hash === window.location.hash;
                 });
 
-                this.setToActive(t);
+                if (t) {
+                    this.setToActive(t);
+                } else {
+                    let tOld = [...triggers].find(triger => {
+                        return triger.dataset.hash === oldUrl;
+                    });
+                    this.setToActive(tOld);
+                }
             });
         }
 
@@ -271,19 +295,39 @@
         }
 
         hideAside() {
-            let trigger = document.getElementById('burger');
             let element = document.querySelector('[data-visible="target"]');
+            if (window.innerWidth > 1530) {
+                element.style.left = ((window.innerWidth - 1530) / 2).toString() + 'px';
+            }
+            /* if (window.innerWidth <= 1530) { */
+                this.shiftSideBar(element);
+            /* } else {
+                    window.addEventListener('resize', () => {
+                        if (window.innerWidth <= 1530) {
+                            element.style.left = '0px';
+                            this.shiftSideBar(element);
+                        } else {
+                            if (element.classList.contains('hide-aside')) {
+                                element.classList.remove('hide-aside');
+                                main.classList.remove('centered');
+                            }
+                            element.style.left = ((window.innerWidth - 1530) / 2).toString() + 'px';
+                        }
+                    });*/
+            /* } */
+        }
+
+        shiftSideBar(element) {
+            let trigger = document.getElementById('burger');
             let main = document.querySelector('.container');
 
-            if (screen.width <= 768) {
+            if (window.innerWidth <= 1024) {
                 element.classList.add('hide-aside');
-                element.style.boxShadow = "0 0 16px rgba(0,0,0,.28)";
                 main.classList.add('centered');
             }
-
             trigger.addEventListener('click', () => {
                 element.classList.toggle('hide-aside');
-                if (screen.width > 768) {
+                if (window.innerWidth > 1024) {
                     main.classList.toggle('centered');
                 }
             });
