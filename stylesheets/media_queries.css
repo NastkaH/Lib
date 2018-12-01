@@ -59,4 +59,17 @@
   .thumb-wrap > a {
     height: auto;
   }
+  .login {
+    width: 100%;
+    padding: 0 1rem 4rem;
+  }
+  .wraper {
+    padding: 4rem 4rem;
+  }
+  .top-row {
+    display: block;
+  }
+  .top-row .field-wrap {
+    width: 100%;
+  }
 }

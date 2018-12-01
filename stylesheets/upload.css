@@ -38,9 +38,9 @@
 }
 .file-upload {
   display: flex;
-  max-width: 500px;
-  min-width: 203px;
+  justify-content: center;
   margin: auto;
+  flex: 1 auto;
 }
 .file-upload input {
   width: 0.1px;
@@ -53,7 +53,6 @@
 .file-upload label {
   padding-left: 1.5em;
   padding-right: 1.5em;
-  width: 100%;
   text-align: center;
   cursor: pointer;
 }

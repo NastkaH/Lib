@@ -61,18 +61,27 @@
 .tab-button:hover {
   background: rgba(120, 199, 123, 0.719);
 }
-.top-row > div {
-  float: left;
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  /*     > div {
+        float: left;
+        width: 48%;
+        margin-right: 4%;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    } */
+}
+.top-row .field-wrap {
   width: 48%;
-  margin-right: 4%;
-}
-.top-row > div:last-child {
-  margin: 0;
-}
-.top-row:after {
-  content: "";
-  display: table;
-  clear: both;
 }
 .field-wrap {
   position: relative;
@@ -94,9 +103,8 @@ label .req {
 input {
   font-size: 1.8rem;
   letter-spacing: 0.05em;
-  display: block;
+  /* display: block; */
   width: 100%;
-  height: 100%;
   padding: 0.5rem 0.8rem;
   margin-top: 0.5rem;
   background: none;
