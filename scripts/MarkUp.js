@@ -36,6 +36,10 @@
                 }
             });
 
+            for (let i = 0; i < 5; i++) {
+                row.appendChild(this.addElement('div', {class: 'fill-in'}));
+            }
+
             if (id == 'books') {
                 let th = row.getElementsByClassName('thumb-wrap');
                 Array.prototype.forEach.call(th, i => {

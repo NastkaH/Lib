@@ -46,10 +46,16 @@
     border-top-right-radius: 25px;
   }
 }
-@media only screen and (max-width: 767px)  and (orientation: portrait) {
+@media only screen and (max-width: 750px) and (orientation: portrait) {
   .el-wrap {
     flex: 1 20rem;
     width: 20rem;
+    max-width: 30rem;
+  }
+  .fill-in {
+    flex: 1 20rem;
+    width: 20rem;
+    max-width: 30rem;
   }
   .info-wrap a {
     max-width: 75rem;
@@ -71,5 +77,16 @@
   }
   .top-row .field-wrap {
     width: 100%;
+  }
+}
+@media only screen and (max-width: 320px) and (orientation: portrait) {
+  .el-wrap {
+    flex: 0 1 25rem;
+  }
+  .fill-in {
+    flex: 0 1 25rem;
+  }
+  .tab-button {
+    padding: 1.5rem 1rem;
   }
 }

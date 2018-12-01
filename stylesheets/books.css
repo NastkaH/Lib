@@ -100,6 +100,10 @@
   width: 100%;
   border-radius: 0.2rem;
 }
+.fill-in {
+  margin: 0 1rem 0;
+  flex: 0 1 20rem;
+}
 .el-wrap-a {
   display: flex;
   /*
