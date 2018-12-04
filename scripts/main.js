@@ -12,18 +12,16 @@
     let pages = new Page(db, new MarkUp());
 
     (function () {
+        let inDB;
         window.onload = () => {
-            if (!localStorage.getItem('last_load_page')) {
-                pages.defaultPage('#home');
-            } else {
-                pages.defaultPage(localStorage.getItem('last_load_page'));
-            }
-            /* pages.defaultPage('#home'); */
+            inDB = pages.openDataBase('users', 1);
+            
         };
 
         pages.loadJSON();
         pages.manageContent();
         pages.shadowOnScroll();
+
 
         window.onbeforeunload = () => {
             if (localStorage.getItem('last_load_page')) {

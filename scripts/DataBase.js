@@ -43,6 +43,67 @@
                 }
             };
         }
+
+        upgradeDataBase(request, dbVersion, store) {
+            let inDB = request.result;
+
+            switch(dbVersion) {
+                case 0:
+                case 1:
+                    store = inDB.createObjectStore('users', {keyPath: 'id'});
+                    store.createIndex('by_fname', 'fname');
+                    store.createIndex('by_lname', 'lname');
+                    store.createIndex('by_email', 'email', {unique: true});
+                    store.createIndex('by_password', 'password', {unique: true});
+            }
+
+            /* if (dbVersion < 3) {
+                // Version 2 introduces a new index of books by year.
+                store = request.transaction.objectStore('users');
+                store.createIndex('by_file', 'file');
+            } */
+        }
+
+        putInDataBase(elsArr, inDB) {
+            let transaction = inDB.transaction('users', 'readwrite');
+            let store = transaction.objectStore('users');
+            let user = {
+            };
+
+            user.id = new Date().getTime().toString();
+            elsArr.forEach((el) => {
+                user[el.name] = el.value;
+            });
+
+            if (this.findInDataBase(inDB, email)) {
+
+            }
+
+            let request = store.add(user);
+
+            request.onsuccess = () => {
+                console.log(user + 'in db');
+            };
+        }
+
+        findInDataBase(email, inDB) {
+            let trans = inDB.transaction('users', 'readonly');
+            let store = trans.objectStore('users');
+            let index = store.index('by_email');
+
+            let request = index.get(email);
+
+            request.onsuccess = () => {
+                let matching = request.result;
+                if (matching !== undefined) {
+                    console.log(matching.id, matching.fname, matching.lname);
+                    return true;
+                } else {
+                    console.log(null);
+                    return false;
+                }
+            };
+        }
     }
 
 

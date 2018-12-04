@@ -194,6 +194,44 @@
             this.muTools = markUp;
         }
 
+        openDataBase(dbName, dbVersion) {
+            let wIDB = window.indexedDB || window.webkitIndexedDB || window.mozIndexedDB || window.OIndexedDB || window.msIndexedDB;
+            IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || window.OIDBTransaction || window.msIDBTransaction;
+            let inDB;
+            let request = wIDB.open(dbName, dbVersion);
+
+            request.onerror = function () {
+                console.log('Error creating/accessing IndexedDB database');
+            };
+
+            request.onupgradeneeded = () => {
+                this.db.upgradeDataBase(request, dbVersion);
+            };
+
+            request.onsuccess = function() {
+                /* opened connection is saved for use in subsequent funcs */
+                inDB = request.result;
+                console.log("Current Object Stores");
+                console.dir(inDB.objectStoreNames);
+
+                if (!localStorage.getItem('last_load_page')) {
+                    pages.defaultPage('#home');
+                } else {
+                    pages.defaultPage(localStorage.getItem('last_load_page'));
+                }
+
+                let state = document.readyState;
+                if(state === 'interactive' || state === 'complete') {
+                    console.log('loaded');
+                    pages.formSubmit(inDB);
+                } else {
+                    console.log('not loaded');
+                }
+
+                return inDB;
+            };
+        }
+
         loadJSON() {
             Object.values(this.db.jsonUrl).forEach(value => {
                 this.db.getDataFromJSON(value, (dataJSON) => {
@@ -232,7 +270,6 @@
                 let showEl = document.getElementById(window.location.hash.substr(1));
                 document.querySelector('main').scrollTop = 0;
 
-
                 if (performance.navigation.type == 1) {
                     showEl.classList.add('show');
                     oldUrl = window.location.hash;
@@ -254,6 +291,10 @@
                         return triger.dataset.hash === oldUrl;
                     });
                     this.setToActive(tOld);
+                }
+
+                if (window.location.hash == 'logform') {
+                    this.formSubmit(inDB);
                 }
             });
         }
@@ -336,9 +377,39 @@
                 }
             });
         }
+
+        formSubmit(inDB) {
+            let f = document.getElementById('signupFm');
+            let btn = f.elements.namedItem('submitS');
+
+            btn.addEventListener('click', () => {
+                this.handleSignUpForm(inDB);
+            });
+        }
+
+        handleSignUpForm(inDB) {
+            let form = document.getElementById('signupFm');
+            let els = [...form.elements];
+            els.pop();
+
+            this.db.putInDataBase(els, inDB);
+        }
+
+        handleLoginForm() {
+            let form = document.getElementById('loginFm');
+
+        }
+    }
+
+    class User {
+        constructor(db, markUp) {
+            this.db = db;
+            this.muTools = markUp;
+        }
     }
 
     App.MarkUp = MarkUp;
     App.Page = Page;
+    App.User = User;
     window.App = App;
 })(window);

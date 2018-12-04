@@ -219,37 +219,37 @@
                                 </div>
                                 <div class="tab-content">
                                     <div id="signup" class="vc show-l">
-                                        <form action="/" method="post">
+                                        <form id ="signupFm" method="post">
                                             <div class="top-row">
                                                 <div class="field-wrap">
-                                                    <label>
-                                                    First Name<span class="req">*</span>
+                                                    <label for="fname">
+                                                        First Name<span class="req">*</span>
                                                     </label>
-                                                    <input type="text" required autocomplete="off" />
+                                                    <input id="fname" name="fname" type="text" required autocomplete="off" />
                                                 </div>
                                                 <div class="field-wrap">
-                                                    <label>
-                                                    Last Name<span class="req">*</span>
+                                                    <label for="lname">
+                                                        Last Name<span class="req">*</span>
                                                     </label>
-                                                    <input type="text"required autocomplete="off"/>
+                                                    <input id="lname" name="lname" type="text" required autocomplete="off"/>
                                                 </div>
                                             </div>
 
                                             <div class="field-wrap">
-                                                <label>
+                                                <label for="semail">
                                                     Email Address<span class="req">*</span>
                                                 </label>
-                                                <input type="email"required autocomplete="off"/>
+                                                <input id="semail" name="email" type="email" required autocomplete="off" />
                                             </div>
 
                                             <div class="field-wrap">
-                                                <label>
+                                                <label for="spassword">
                                                     Set A Password<span class="req">*</span>
                                                 </label>
-                                                <input type="password"required autocomplete="off"/>
+                                                <input id="spassword" name="password" type="password" required autocomplete="off"/>
                                             </div>
 
-                                            <button type="submit" class="button button-block">Sign Up</button>
+                                            <button id="submitS" type="submit" class="button button-block">Sign Up</button>
                                         </form>
                                         <div class="text">
                                             <span>
@@ -265,19 +265,19 @@
                                             </a>
                                         </div>
                                     </div>
-                                    <div id="login" class="vc">
-                                        <form action="/" method="post">
+                                    <div id="loginFm" class="vc">
+                                        <form id="login" action="/" method="post">
                                             <div class="field-wrap">
-                                                <label>
+                                                <label for="lemail">
                                                     Email Address<span class="req">*</span>
                                                 </label>
-                                                <input type="email"required autocomplete="off"/>
+                                                <input id="lemail" name="email" type="email" required autocomplete="off"/>
                                             </div>
                                             <div class="field-wrap">
-                                                <label>
+                                                <label for="lpassword">
                                                     Password<span class="req">*</span>
                                                 </label>
-                                                <input type="password"required autocomplete="off"/>
+                                                <input type="password" id="lpassword" name="password" required autocomplete="off"/>
                                             </div>
                                             <p class="forgot"><a href="#">Forgot Password?</a></p>
                                             <button class="button button-block">Log In</button>
@@ -616,7 +616,6 @@
                 </div>
             </section>
         </main>
-
         <script src="scripts/DataBase.js"></script>
         <script src="scripts/MarkUp.js"></script>
         <script src="scripts/main.js"></script>
@@ -633,7 +632,7 @@
                 });
             }
         </script>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBR2IOk1CVeGcAQgsdRoSW4b1gvEouhvNk&callback=initMap">
+        <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBR2IOk1CVeGcAQgsdRoSW4b1gvEouhvNk&callback=initMap"> -->
         </script>
     </body>
 </html>
