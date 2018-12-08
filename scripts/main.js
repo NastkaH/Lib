@@ -12,10 +12,8 @@
     let pages = new Page(db, new MarkUp());
 
     (function () {
-        let inDB;
         window.onload = () => {
-            inDB = pages.openDataBase('users', 1);
-            
+            pages.openDataBase('users', 1);
         };
 
         pages.loadJSON();
@@ -26,6 +24,9 @@
         window.onbeforeunload = () => {
             if (localStorage.getItem('last_load_page')) {
                 localStorage.removeItem('last_load_page');
+            }
+            if (localStorage.getItem('logged_user') && localStorage.getItem('last_load_page') == '#logform') {
+                localStorage.setItem('last_load_page', '#user');
             }
             localStorage.setItem('last_load_page', window.location.hash);
         };

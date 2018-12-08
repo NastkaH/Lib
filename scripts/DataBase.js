@@ -44,17 +44,16 @@
             };
         }
 
-        upgradeDataBase(request, dbVersion, store) {
-            let inDB = request.result;
-
-            switch(dbVersion) {
+        upgradeData(upgradeDB) {
+            switch(upgradeDB.oldVersion) {
                 case 0:
                 case 1:
                     store = inDB.createObjectStore('users', {keyPath: 'id'});
                     store.createIndex('by_fname', 'fname');
                     store.createIndex('by_lname', 'lname');
                     store.createIndex('by_email', 'email', {unique: true});
-                    store.createIndex('by_password', 'password', {unique: true});
+                    store.createIndex('by_password', 'password');
+                    break;
             }
 
             /* if (dbVersion < 3) {
@@ -64,45 +63,40 @@
             } */
         }
 
-        putInDataBase(elsArr, inDB) {
-            let transaction = inDB.transaction('users', 'readwrite');
-            let store = transaction.objectStore('users');
-            let user = {
-            };
+        addUser(request, els, f) {
+            els = [...els];
+            els.pop();
+            request.then(result => {
+                let inDB = result.result;
+                let trans = inDB.transaction('users', 'readwrite');
+                let store = trans.objectStore('users');
+                let user = {};
 
-            user.id = new Date().getTime().toString();
-            elsArr.forEach((el) => {
-                user[el.name] = el.value;
+                user.id = new Date().getTime().toString();
+                els.forEach(el => user[el.name] = el.value);
+
+                return store.add(user);
+            }).catch(error => {
+                /* trans.abort(); */
+                console.log(error);
+            })
+            .then(() => {
+                console.log('Added');
+                f.reset();
             });
-
-            if (this.findInDataBase(inDB, email)) {
-
-            }
-
-            let request = store.add(user);
-
-            request.onsuccess = () => {
-                console.log(user + 'in db');
-            };
         }
 
-        findInDataBase(email, inDB) {
-            let trans = inDB.transaction('users', 'readonly');
-            let store = trans.objectStore('users');
-            let index = store.index('by_email');
+        getByKey(request, value, name) {
+            return request.then(result => {
+                let inDB = result.result;
+                let trans = inDB.transaction('users', 'readonly');
+                let store = trans.objectStore('users');
+                let index = store.index(`by_${name}`);
 
-            let request = index.get(email);
-
-            request.onsuccess = () => {
-                let matching = request.result;
-                if (matching !== undefined) {
-                    console.log(matching.id, matching.fname, matching.lname);
-                    return true;
-                } else {
-                    console.log(null);
-                    return false;
-                }
-            };
+                return index.get(value);
+            }).catch(er => {
+                console.log(er);
+            });
         }
     }
 

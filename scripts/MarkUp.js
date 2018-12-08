@@ -8,7 +8,6 @@
         }
 
         createPgMarkUp(value, data) {
-            let el;
             const section = document.querySelector('[data-role="generate"]');
 
             let index = value.indexOf('3000/');
@@ -19,69 +18,91 @@
                 )
             );
 
+            this.createElements(data, row, id);
+
+            for (let i = 0; i < 5; i++) {
+                row.appendChild(this.addElement('div', {class: 'fill-in'}));
+            }
+
+            /* let pagnt = createPaginationMU();
+            row.appendChild(pagnt); */
+
+            section.appendChild(row);
+            let th = row.getElementsByClassName('thumb-wrap');
+            if (id == 'books') {
+                Array.prototype.forEach.call(th, i => {
+                    i.classList.add('b');
+                });
+                this.openBook();
+            } else if (id == 'audios') {
+                Array.prototype.forEach.call(th, i => {
+                    i.classList.add('au');
+                });
+            }
+        }
+
+        createPaginationMU() {
+            let pagnt = this.addElement('div', {class: 'pagination'},
+                this.addElement('a', {}, '<<'),
+                this.addElement('a', {class: 'active'}, '1'),
+                this.addElement('a', {}, '2'),
+                this.addElement('a', {}, '3'),
+                this.addElement('a', {}, '>>')
+            );
+            return pagnt;
+        }
+
+        createElements(data, row, id) {
+            let el;
+
             data.forEach(obj => {
                 let arrs = Object.values(obj.data);
+
                 arrs[0].forEach(item => {
-                    el = this.createElMarkUp(item, obj.name);
+                    if (id === 'audios') {
+                        el = this.createElMarkUp(item, obj.name);
+                        el.appendChild(this.createAudioMarkUp(item));
+                    } else if (id === 'videos') {
+                        el = this.createVideo(item);
+                    } else {
+                        el = this.createElMarkUp(item, obj.name);
+                    }
                     row.appendChild(el);
                 });
 
                 if (arrs[1]) {
                     arrs[1].forEach(set => {
                         Object.values(set.items).forEach(item => {
-                            el = this.createElMarkUp(item, obj.name);
+                            if (id === 'audios') {
+                                el = this.createElMarkUp(item, obj.name);
+                                el.appendChild(this.createAudioMarkUp(item));
+                            } else if (id === 'videos') {
+                                el = this.createVideo(item);
+                            } else {
+                                el = this.createElMarkUp(item, obj.name);
+                            }
                             row.appendChild(el);
                         });
                     });
                 }
             });
-
-            for (let i = 0; i < 5; i++) {
-                row.appendChild(this.addElement('div', {class: 'fill-in'}));
-            }
-
-            if (id == 'books') {
-                let th = row.getElementsByClassName('thumb-wrap');
-                Array.prototype.forEach.call(th, i => {
-                    i.classList.add('b');
-                });
-            }
-
-            if (id == 'audios') {
-                let th = row.getElementsByClassName('thumb-wrap');
-                Array.prototype.forEach.call(th, i => {
-                    i.classList.add('au');
-                });
-            }
-
-            section.appendChild(row);
         }
 
         createElMarkUp(item, objName) {
             let el = this.thumbMarkUp(item, objName);
-            /* el.addEventListener('click', () => {
-                let currentSec = document.querySelectorAll('.show');
-                currentSec[0].classList.toggle('show');
-
-                this.createDetailedPage(item, objName);
-                let detPage = document.getElementById('detPage');
-                let id = `s${item.id}`;
-                let e = document.getElementById(id);
-                e.classList.toggle('show');
-            }); */
             return el;
         }
 
         thumbMarkUp(item, objName) {
             let el = this.addElement('div', {id: `${item.id}`, class: 'el-wrap'},
                 this.addElement('div', {class: 'thumb-wrap'},
-                    this.addElement('a', {href: `#s${item.id}`},
+                    this.addElement('a', {href: `${item.file}`, target: 'pdf_frame'},
                         this.addElement('img', {src: `${item.img}`, alt: `${item.name}`, class: 'thumb-img'})
                     )
                 ),
                 this.addElement('div', {class: 'info-wrap'},
                     this.addElement('h2', {},
-                        this.addElement('a', {href: `#s${item.id}`}, `${item.name}`),
+                        this.addElement('a', {href: `${item.file}`, target: '_blank'}, `${item.name}`),
                         this.addElement('span', {class: 'tooltip'}, `${item.name}`)
                     ),
                     this.addElement('p', {},
@@ -92,38 +113,7 @@
             return el;
         }
 
-        /* createDetailedPage(item, objName) {
-            let section = document.querySelector('[data-role="generate-det-pg"]');
-
-            let el = this.addElement('div', {id: `s${item.id}`,class: 'page-wrap'},
-            this.addElement('section', {class: 'hd-wrap'},
-            this.addElement('div', {class: 'img-wrap'},
-            this.addElement('img', {src: `${item.img}`, alt: `${item.name}`, class: 'det-img'})
-                    ),
-                    this.addElement('div', {class: 'info-cont'},
-                    this.addElement('h1', {class: 'page-hd'}, `${item.name}`),
-                    this.addElement('p', {},
-                    this.addElement('a', {href: '#'}, `${objName}`)
-                            ),
-                            this.addElement('p', {}, `${item.year}`),
-                            this.addElement('p', {}, `${item.genre}`),
-                            this.addElement('p', {}, `${item.about}`)
-                    )
-                ),
-                this.addElement('div', {class: 'file-wrap'},
-        /*             addElement('div', {},
-                        addElement('a', {href: '#'}, 'Download file')
-                    ), */
-          /*           this.addElement('div', {},
-                    this.addElement('a', {href: `${item.file}`, target: '_blank'}, 'Open file')
-                    )
-                )
-            );
-
-            section.appendChild(el);
-        } */
-
-        createAudioMarkUp(item, objName, wrapClass) {
+        createAudioMarkUp(item/* , objName, wrapClass */) {
         /*     let el = addElement('div', {id: `${item.id}`, class: 'el-wrap-a'},
                 addElement('div', {class: wrapClass},
                     addElement('a', {href: '#'},
@@ -135,32 +125,100 @@
                         addElement('audio', {controls: '', src: `${item.file}`, alt: `${item.name}`, class: 'audio-play'},
                             'Your browser does not support the audio tag.')
                     )
-                ),
-                addElement('div', {class: 'info-wrap'},
-                    addElement('h2', {},
-                        addElement('a', {href: '#'}, `${item.name}`)
-                    ),
-                    addElement('p', {},
-                        addElement('a', {href: '#'}, `${objName}`)
-                    )
                 )
             ); */
 
-            let el = this.addElement('div', {id: `${item.id}`, class: 'el-wrap'},
-            this.addElement('div', {class: wrapClass},
-            this.addElement('img', {src: `${item.img}`, alt: `${item.name}`, class: 'thumb-img'})
+/*             let el = this.addElement('div', {id: `${item.id}`, class: 'el-wrap'},
+                this.addElement('div', {class: wrapClass},
+                    this.addElement('img', {src: `${item.img}`, alt: `${item.name}`, class: 'thumb-img'})
                 ),
                 this.addElement('div', {class: 'info-wrap'},
-                this.addElement('h2', {},
-                this.addElement('a', {href: '#'}, `${item.name}`)
+                    this.addElement('h2', {},
+                        this.addElement('a', {href: '#'}, `${item.name}`)
                     ),
                     this.addElement('p', {},
-                    this.addElement('a', {href: '#'}, `${objName}`)
+                        this.addElement('a', {href: '#'}, `${objName}`)
+                    )
+                ), */
+                let el = this.addElement('div', {class: 'wrap'},
+                    this.addElement('div', {class: 'audio-wrap'},
+                        this.addElement('audio', {controls: '', src: `${item.file}`, alt: `${item.name}`, class: 'audio-play'},
+                            'Your browser does not support the audio tag.')
+                    )
+                );
+
+            return el;
+        }
+
+        createVideo(item, objName) {
+            let el = this.addElement('div', {id: `${item.id}`, class: 'el-wrap'},
+                this.addElement('div', {class: 'thumb-wrap'},
+                    this.addElement('div', {class: 'wrap'},
+                        this.addElement('div', {class: 'video-wrap'},
+                            this.addElement('video', {controls: '', src: `${item.file}`, alt: `${item.name}`, poster: `${item.img}`, class: 'video-play'},
+                            'Your browser does not support the video tag.')
+                        )
+                    )
+                ),
+                this.addElement('div', {class: 'info-wrap'},
+                    this.addElement('h2', {},
+                        this.addElement('a', {href: `${item.file}`, target: '_blank'}, `${item.name}`),
+                        this.addElement('span', {class: 'tooltip'}, `${item.name}`)
+                    ),
+                    this.addElement('p', {},
+                        this.addElement('a', {href: '#'}, `${objName}`)
                     )
                 )
             );
-
             return el;
+        }
+
+        openBook() {
+            let els = document.getElementById('books').getElementsByTagName('img');
+            let fr = document.getElementById('frame');
+            if (!fr) {
+                fr = this.addElement('section', {id: 'frame', class: 'frame'});
+            }
+
+            Array.prototype.forEach.call(els, (el) => {
+                let b = el.parentNode;
+                let book = b.getAttribute('href');
+                b.addEventListener('click', () => {
+                    this.bookFrame(book, fr);
+                });
+                window.onkeyup = function (event) {
+                    if (event.keyCode == 27) {
+                        fr.removeChild(fr.firstChild);
+                        fr.style.height = '0';
+                    }
+                };
+            });
+
+            document.querySelector('.mrg-auto').appendChild(fr);
+        }
+
+        bookFrame(book, fr) {
+            let el = this.addElement('iframe', {id:'iframe', class: 'iframe', name: 'pdf_frame', src: `${book}`});
+            if (!fr.firstChild) {
+                fr.appendChild(el);
+                fr.style.height = '100%';
+            } else {
+                fr.removeChild(fr.firstChild);
+            }
+        }
+
+        sideLi(genres, id) {
+            let ul = this.addElement('ul', {id: `aside-${id}`, class: 'sb-ls hide g'});
+            genres.forEach(genre => {
+                let el = this.addElement('li', {class: 'sb-ls-it', role: 'menuitem'},
+                    this.addElement('a', {class: 'sb-ls-ln', href: '#'},
+                        this.addElement('img', {class: 'nav-ico', src: 'media/img/next.svg', alt: 'next'}),
+                        this.addElement('span', {}, `${genre}`)
+                    )
+                );
+                ul.appendChild(el);
+            });
+            return ul;
         }
 
         addElement(title, attributes) {
@@ -195,61 +253,68 @@
         }
 
         openDataBase(dbName, dbVersion) {
-            let wIDB = window.indexedDB || window.webkitIndexedDB || window.mozIndexedDB || window.OIndexedDB || window.msIndexedDB;
-            IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || window.OIDBTransaction || window.msIDBTransaction;
-            let inDB;
-            let request = wIDB.open(dbName, dbVersion);
+            if (!('indexedDB' in window)) {
+                console.log('This browser doesn\'t support IndexedDB');
+                return;
+            } else {
+                let request = window.indexedDB.open(dbName, dbVersion, upgradeDB => {
+                    this.db.upgradeData(upgradeDB);
+                });
+                /* Cast request obj into promise */
+                let promiseReq = Promise.resolve(request);
 
-            request.onerror = function () {
-                console.log('Error creating/accessing IndexedDB database');
-            };
+                promiseReq.then(() => {
+                    if (localStorage.getItem('logged_user')) {
+                        let aDiv = document.querySelector('[data-hash="#logform');
+                        let aHref = aDiv.querySelector('a');
+                        aDiv.dataset.hash = '#user';
+                        aHref.setAttribute('href', '#user');
 
-            request.onupgradeneeded = () => {
-                this.db.upgradeDataBase(request, dbVersion);
-            };
+                        let upload = document.getElementById('upload');
+                        upload.querySelector('.hide').classList.toggle('hide');
+                    } else {
+                        let state = document.readyState;
+                        if(state === 'interactive' || state === 'complete') {
+                            this.formSubmit(promiseReq);
+                            let upload = document.getElementById('upload');
+                            upload.querySelector('.not-logged').classList.toggle('hide');
+                        }
+                    }
 
-            request.onsuccess = function() {
-                /* opened connection is saved for use in subsequent funcs */
-                inDB = request.result;
-                console.log("Current Object Stores");
-                console.dir(inDB.objectStoreNames);
-
-                if (!localStorage.getItem('last_load_page')) {
-                    pages.defaultPage('#home');
-                } else {
-                    pages.defaultPage(localStorage.getItem('last_load_page'));
-                }
-
-                let state = document.readyState;
-                if(state === 'interactive' || state === 'complete') {
-                    console.log('loaded');
-                    pages.formSubmit(inDB);
-                } else {
-                    console.log('not loaded');
-                }
-
-                return inDB;
-            };
+                    if (!localStorage.getItem('last_load_page')) {
+                        this.defaultPage('#home');
+                    } else {
+                        this.defaultPage(localStorage.getItem('last_load_page'));
+                    }
+                }).catch(er => console.log(er));
+            }
         }
 
         loadJSON() {
             Object.values(this.db.jsonUrl).forEach(value => {
                 this.db.getDataFromJSON(value, (dataJSON) => {
                     this.muTools.createPgMarkUp(value, dataJSON);
+                    this.createSideList(value, dataJSON);
                 });
             });
         }
 
         defaultPage(hash) {
             window.location.hash = hash;
-            let triggers = document.querySelectorAll('[data-role="triger"]');
-            let t = [...triggers].find(triger => {
+            let triggers = [...document.querySelectorAll('[data-role="triger"]')];
+            let t = triggers.find(triger => {
                 return triger.dataset.hash === hash;
+            });
+            let ta = triggers.find(triger => {
+                return triger.classList.contains('active');
             });
 
             if (!t.getAttribute('class')) {
                 t.className = 'active';
             } else {
+                if (ta) {
+                    ta.classList.remove('active');
+                }
                 t.classList.add('active');
             }
 
@@ -260,6 +325,26 @@
             this.showElsOnHash();
             this.showElsOnTrigger();
             this.hideAside();
+        }
+
+        createSideList(value, data) {
+            let arrG = [];
+            let genres = new Set();
+            let id = value.slice(value.indexOf('3000/') + 5);
+            let lis = document.querySelector('nav').querySelectorAll('[role="menuitem"]');
+            let li = [...lis].find(li => li.dataset.hash === `#${id}`);
+
+            li.addEventListener('click', () => document.getElementById(`aside-${id}`).classList.toggle('hide'));
+
+            data.forEach(obj => {
+                let arrs = Object.values(obj.data);
+                arrs.forEach(arr => arr.forEach(item => arrG.push(item.genre)));
+            });
+            arrG.forEach(arr => arr.forEach(el => genres.add(el)));
+
+            genres = [...genres];
+            li.appendChild(this.muTools.sideLi(genres, id));
+            /* genres = genres.filter((el, i, genres) => genres.indexOf(el) === i); */
         }
 
         showElsOnHash() {
@@ -280,21 +365,13 @@
                 }
 
                 let triggers = document.querySelectorAll('[data-role="triger"]');
-                let t = [...triggers].find(triger => {
-                    return triger.dataset.hash === window.location.hash;
-                });
+                let t = [...triggers].find(triger => triger.dataset.hash === window.location.hash);
 
                 if (t) {
                     this.setToActive(t);
                 } else {
-                    let tOld = [...triggers].find(triger => {
-                        return triger.dataset.hash === oldUrl;
-                    });
+                    let tOld = [...triggers].find(triger => triger.dataset.hash === oldUrl);
                     this.setToActive(tOld);
-                }
-
-                if (window.location.hash == 'logform') {
-                    this.formSubmit(inDB);
                 }
             });
         }
@@ -314,6 +391,14 @@
                     this.setToActive(button);
                 });
             });
+
+            let btn = document.getElementById('user').querySelector('button');
+
+            btn.onclick = () => {
+                localStorage.removeItem('logged_user');
+                location.reload();
+                this.defaultPage('#home');
+            };
         }
 
         shadowOnScroll() {
@@ -366,50 +451,99 @@
             let trigger = document.getElementById('burger');
             let main = document.querySelector('.container');
 
-            if (window.innerWidth <= 1024) {
+            if (screen.width <= 1024) {
                 element.classList.add('hide-aside');
                 main.classList.add('centered');
             }
             trigger.addEventListener('click', () => {
                 element.classList.toggle('hide-aside');
-                if (window.innerWidth > 1024) {
+                if (screen.width > 1024) {
                     main.classList.toggle('centered');
                 }
             });
         }
 
-        formSubmit(inDB) {
-            let f = document.getElementById('signupFm');
-            let btn = f.elements.namedItem('submitS');
+        validateForm(form) {
+            let els = [...form.elements];
+            els.pop();
+            let arr = [];
+            els.forEach(el => arr.push(el.value));
+            if (arr.some(x => x == '')) {
+                alert('Fill in all fields!');
+                return false;
+            } else {
+                return true;
+            }
+        }
 
-            btn.addEventListener('click', () => {
-                this.handleSignUpForm(inDB);
+        formSubmit(request) {
+            let section = document.getElementById('logform');
+            let arr = [...section.querySelectorAll('form')];
+
+            arr.forEach(form => {
+                let btn = form.querySelector('button');
+                btn.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    if (this.validateForm(form)) {
+                        this.handleForm(request, form);
+                    }
+                });
             });
         }
 
-        handleSignUpForm(inDB) {
-            let form = document.getElementById('signupFm');
-            let els = [...form.elements];
-            els.pop();
+        handleForm(request, form) {
+            let els = form.elements;
+            let email = els.namedItem('email');
 
-            this.db.putInDataBase(els, inDB);
+            let dbReq = this.db.getByKey(request, email.value, 'email');
+            dbReq.then(userReq => {
+                userReq.onsuccess = (event) => {
+                    let user = event.target.result;
+
+                    switch (form.getAttribute('id')) {
+                        case 'signupFm': {
+                            if (user === undefined) {
+                                this.db.addUser(request, els, form);
+                                let loginBtn = document.querySelector('[data-href="login"]');
+                                loginBtn.click();
+                            } else {
+                                alert('this user is already in db');
+                                email.focus();
+                            }
+                            break;
+                        }
+                        case 'loginFm': {
+                            if (user === undefined || user.email !== email.value || user.password !== els.password.value) {
+                                alert('Wrong email or password!');
+                                els.password.value = '';
+                            } else {
+                                location.reload();
+                                localStorage.setItem('logged_user', user.id);
+                                this.defaultPage('#home');
+                            }
+                        }
+                    }
+                };
+            }).catch(er => console.log(er));
         }
 
-        handleLoginForm() {
-            let form = document.getElementById('loginFm');
+        user(request) {
+            let userName = document.querySelector('.user-name');
+            let logged = localStorage.getItem('logged_user').toString();
 
-        }
-    }
-
-    class User {
-        constructor(db, markUp) {
-            this.db = db;
-            this.muTools = markUp;
+            let dbReq = this.db.getByKey(request, logged, 'id');
+            dbReq.then(userReq => {
+                userReq.onsuccess = (event) => {
+                    let user = event.target.result;
+                    console.log(user);
+                    let text = document.createTextNode(`${user.fname} ${user.lname}`);
+                    userName.appendChild(text);
+                };
+            }).catch(er => console.log(er));
         }
     }
 
     App.MarkUp = MarkUp;
     App.Page = Page;
-    App.User = User;
     window.App = App;
 })(window);

@@ -47,7 +47,7 @@
                 </div>
                 <div class="other-ico" data-role="triger" data-hash="#logform">
                     <a href="#logform">
-                        <img src="media/img/user-black.svg" alt="login" />
+                        <img src="media/img/user-black.svg" alt="user" />
                     </a>
                 </div>
             </div>
@@ -84,77 +84,6 @@
                     </ul>
                 </nav>
                 <ul class="sb-ls">
-                    <div class="sb-ls-hd">Genre</div>
-                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
-                        <img class="nav-ico" src="media/img/next.svg" alt="next">
-                        <span>Fiction</span>
-                    </a></li>
-                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
-                        <img class="nav-ico" src="media/img/next.svg" alt="next">
-                        <span>Tragicomedy</span>
-                    </a></li>
-                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
-                        <img class="nav-ico" src="media/img/next.svg" alt="next">
-                        <span>Fantasy Fiction</span>
-                    </a></li>
-                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
-                        <img class="nav-ico" src="media/img/next.svg" alt="next">
-                        <span>Drama</span>
-                    </a></li>
-                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
-                        <img class="nav-ico" src="media/img/next.svg" alt="next">
-                        <span>Young Adult</span>
-                    </a></li>
-                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
-                        <img class="nav-ico" src="media/img/next.svg" alt="next">
-                        <span>Mystery</span>
-                    </a></li>
-                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
-                        <img class="nav-ico" src="media/img/next.svg" alt="next">
-                        <span>Thriller</span>
-                    </a></li>
-                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
-                        <img class="nav-ico" src="media/img/next.svg" alt="next">
-                        <span>Epic Fantasy</span>
-                    </a></li>
-                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
-                        <img class="nav-ico" src="media/img/next.svg" alt="next">
-                        <span>Utopia</span>
-                    </a></li>
-                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
-                        <img class="nav-ico" src="media/img/next.svg" alt="next">
-                        <span>Dystopia</span>
-                    </a></li>
-                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
-                        <img class="nav-ico" src="media/img/next.svg" alt="next">
-                        <span>Post-Apocalyptic</span>
-                    </a></li>
-                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
-                        <img class="nav-ico" src="media/img/next.svg" alt="next">
-                        <span>Horror</span>
-                    </a></li>
-                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
-                        <img class="nav-ico" src="media/img/next.svg" alt="next">
-                        <span>Short Story</span>
-                    </a></li>
-                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
-                        <img class="nav-ico" src="media/img/next.svg" alt="next">
-                        <span>Speculative Fiction</span>
-                    </a></li>
-                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
-                        <img class="nav-ico" src="media/img/next.svg" alt="next">
-                        <span>Novel</span>
-                    </a></li>
-                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
-                        <img class="nav-ico" src="media/img/next.svg" alt="next">
-                        <span>Domestic Fiction</span>
-                    </a></li>
-                    <li class="sb-ls-it" role="menuitem"><a class="sb-ls-ln" href="#">
-                        <img class="nav-ico" src="media/img/next.svg" alt="next">
-                        <span>Historical Fiction</span>
-                    </a></li>
-                </ul>
-                <ul class="sb-ls">
                     <li class="sb-ls-it" role="menuitem" data-role="triger" data-hash="#contact"><a class="sb-ls-ln" href="#contact">
                         <img class="nav-ico" src="media/img/worldwide.svg" alt="contact">
                         <span>Contact</span>
@@ -171,8 +100,6 @@
             </aside>
             <section class="container">
                 <div class="mrg-auto" data-role="generate">
-                    <section id="detPage" class="row" data-role="generate-det-pg">
-                    </section>
                     <section id="home" class="row">
                         <header class="sctn-hd">
                             <h1>Library</h1>
@@ -198,7 +125,7 @@
                         <header class="sctn-hd">
                             <h2>Upload Files</h2>
                         </header>
-                        <div class="drop-area">
+                        <div class="drop-area hide">
                             <form action="" method="post" class="file-upload" enctype="multipart/form-data">
                                 <label class="button" for="fileElem">Select files
                                     <input type="file" name="newFile" id="fileElem" multiple>
@@ -206,10 +133,15 @@
                             </form>
                             <div class="files-wrap"></div>
                         </div>
+                        <div class="not-logged hide">
+                            <button class="button button-block">
+                                <a href="#logform">Authorise</a>
+                            </button>
+                        </div>
                     </section>
                     <section id="logform" class="row v">
                         <header class="sctn-hd">
-                            <h2>Register or Login</h2>
+                            <h2>Authorise</h2>
                         </header>
                         <div class="login">
                             <div class="wraper">
@@ -219,7 +151,7 @@
                                 </div>
                                 <div class="tab-content">
                                     <div id="signup" class="vc show-l">
-                                        <form id ="signupFm" method="post">
+                                        <form id ="signupFm" name="signupFm" method="post">
                                             <div class="top-row">
                                                 <div class="field-wrap">
                                                     <label for="fname">
@@ -236,20 +168,20 @@
                                             </div>
 
                                             <div class="field-wrap">
-                                                <label for="semail">
+                                                <label for="email">
                                                     Email Address<span class="req">*</span>
                                                 </label>
-                                                <input id="semail" name="email" type="email" required autocomplete="off" />
+                                                <input id="email" name="email" type="email" required autocomplete="off" />
                                             </div>
 
                                             <div class="field-wrap">
-                                                <label for="spassword">
+                                                <label for="password">
                                                     Set A Password<span class="req">*</span>
                                                 </label>
-                                                <input id="spassword" name="password" type="password" required autocomplete="off"/>
+                                                <input id="password" name="password" type="password" required autocomplete="off"/>
                                             </div>
 
-                                            <button id="submitS" type="submit" class="button button-block">Sign Up</button>
+                                            <button id="submit" type="submit" class="button button-block">Submit</button>
                                         </form>
                                         <div class="text">
                                             <span>
@@ -265,26 +197,36 @@
                                             </a>
                                         </div>
                                     </div>
-                                    <div id="loginFm" class="vc">
-                                        <form id="login" action="/" method="post">
+                                    <div id="login" class="vc">
+                                        <form id="loginFm" name="loginFm" method="post">
                                             <div class="field-wrap">
-                                                <label for="lemail">
+                                                <label for="email">
                                                     Email Address<span class="req">*</span>
                                                 </label>
-                                                <input id="lemail" name="email" type="email" required autocomplete="off"/>
+                                                <input id="email" name="email" type="email" required autocomplete="off"/>
                                             </div>
                                             <div class="field-wrap">
-                                                <label for="lpassword">
+                                                <label for="password">
                                                     Password<span class="req">*</span>
                                                 </label>
-                                                <input type="password" id="lpassword" name="password" required autocomplete="off"/>
+                                                <input type="password" id="password" name="password" required autocomplete="off"/>
                                             </div>
                                             <p class="forgot"><a href="#">Forgot Password?</a></p>
-                                            <button class="button button-block">Log In</button>
+                                            <button id="submit" class="button button-block">Submit</button>
                                         </form>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </section>
+                    <section id="user" class="row">
+                        <header class="sctn-hd">
+                            <h2>Profile</h2>
+                        </header>
+                        <div class="data">
+                            <button class="button button-block">
+                                Log Out
+                            </button>
                         </div>
                     </section>
                     <section id="contact" class="row">
@@ -632,7 +574,7 @@
                 });
             }
         </script>
-        <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBR2IOk1CVeGcAQgsdRoSW4b1gvEouhvNk&callback=initMap"> -->
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBR2IOk1CVeGcAQgsdRoSW4b1gvEouhvNk&callback=initMap">
         </script>
     </body>
 </html>

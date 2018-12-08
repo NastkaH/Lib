@@ -28,7 +28,7 @@
             padding: @indent 0;
             padding-left: @aside-pdng;
             transition: .25s ease;
-            border-radius: 0 50px 50px 0;
+            border-radius: 0 5rem 5rem 0;
 
             &:first-child {
                 margin-top: @2indent;
@@ -41,6 +41,16 @@
             &:hover {
                 .hover();
             }
+
+            .g {
+                .sb-ls-it {
+                    width: calc(@sb-width - @aside-pdng - 1rem);
+                }
+            }
+
+            /* &:not(:target) > ul {
+                display: none;
+            } */
         }
 
         &-ln {
@@ -66,10 +76,6 @@
         }
     }
 }
-
-/* .sb-ls-ln  span {
-    padding: calc((@hgt-indent - @link-hgt) / 2) 0;
-} */
 
 .nav-ico {
     height: @link-hgt;
