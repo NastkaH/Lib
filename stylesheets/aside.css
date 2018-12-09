@@ -73,6 +73,7 @@
 }
 .sb-ls-it .g .sb-ls-it {
   width: calc(26.3rem - calc(1rem + ((5.4rem - 2rem) / 2)) - 1rem);
+  cursor: pointer;
 }
 .sb-ls-ln {
   display: inline-flex;

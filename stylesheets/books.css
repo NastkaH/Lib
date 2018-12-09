@@ -86,6 +86,9 @@
   visibility: visible;
   opacity: 1;
 }
+.info-wrap .genre {
+  display: none;
+}
 .thumb-wrap > a {
   height: 120px;
 }

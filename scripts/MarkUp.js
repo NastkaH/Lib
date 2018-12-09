@@ -59,27 +59,28 @@
                 let arrs = Object.values(obj.data);
 
                 arrs[0].forEach(item => {
-                    if (id === 'audios') {
-                        el = this.createElMarkUp(item, obj.name);
-                        el.appendChild(this.createAudioMarkUp(item));
-                    } else if (id === 'videos') {
-                        el = this.createVideo(item);
+                    if (id === 'videos') {
+                        el = this.createVideo(item, obj.name, item.genre);
                     } else {
-                        el = this.createElMarkUp(item, obj.name);
+                        el = this.createElMarkUp(item, obj.name, item.genre);
+                        if (id === 'audios') {
+                            el.appendChild(this.createAudioMarkUp(item));
+                        }
                     }
                     row.appendChild(el);
                 });
 
                 if (arrs[1]) {
                     arrs[1].forEach(set => {
+                        let genre = set.genre;
                         Object.values(set.items).forEach(item => {
-                            if (id === 'audios') {
-                                el = this.createElMarkUp(item, obj.name);
-                                el.appendChild(this.createAudioMarkUp(item));
-                            } else if (id === 'videos') {
-                                el = this.createVideo(item);
+                            if (id === 'videos') {
+                                el = this.createVideo(item, obj.name, genre);
                             } else {
-                                el = this.createElMarkUp(item, obj.name);
+                                el = this.createElMarkUp(item, obj.name, genre);
+                                if (id === 'audios') {
+                                    el.appendChild(this.createAudioMarkUp(item));
+                                }
                             }
                             row.appendChild(el);
                         });
@@ -88,12 +89,12 @@
             });
         }
 
-        createElMarkUp(item, objName) {
-            let el = this.thumbMarkUp(item, objName);
+        createElMarkUp(item, objName, genre) {
+            let el = this.thumbMarkUp(item, objName, genre);
             return el;
         }
 
-        thumbMarkUp(item, objName) {
+        thumbMarkUp(item, objName, genre) {
             let el = this.addElement('div', {id: `${item.id}`, class: 'el-wrap'},
                 this.addElement('div', {class: 'thumb-wrap'},
                     this.addElement('a', {href: `${item.file}`, target: 'pdf_frame'},
@@ -107,7 +108,8 @@
                     ),
                     this.addElement('p', {},
                         this.addElement('a', {href: '#'}, `${objName}`)
-                    )
+                    ),
+                    this.addElement('p', {class: 'genre'}, `${genre}`)
                 )
             );
             return el;
@@ -150,7 +152,7 @@
             return el;
         }
 
-        createVideo(item, objName) {
+        createVideo(item, objName, genre) {
             let el = this.addElement('div', {id: `${item.id}`, class: 'el-wrap'},
                 this.addElement('div', {class: 'thumb-wrap'},
                     this.addElement('div', {class: 'wrap'},
@@ -167,7 +169,8 @@
                     ),
                     this.addElement('p', {},
                         this.addElement('a', {href: '#'}, `${objName}`)
-                    )
+                    ),
+                    this.addElement('p', {class: 'genre'}, `${genre}`)
                 )
             );
             return el;
@@ -209,9 +212,9 @@
 
         sideLi(genres, id) {
             let ul = this.addElement('ul', {id: `aside-${id}`, class: 'sb-ls hide g'});
-            genres.forEach(genre => {
-                let el = this.addElement('li', {class: 'sb-ls-it', role: 'menuitem'},
-                    this.addElement('a', {class: 'sb-ls-ln', href: '#'},
+            [...genres].forEach(genre => {
+                let el = this.addElement('li', {class: 'sb-ls-it'},
+                    this.addElement('div', {class: 'sb-ls-ln'},
                         this.addElement('img', {class: 'nav-ico', src: 'media/img/next.svg', alt: 'next'}),
                         this.addElement('span', {}, `${genre}`)
                     )
@@ -330,11 +333,19 @@
         createSideList(value, data) {
             let arrG = [];
             let genres = new Set();
+
             let id = value.slice(value.indexOf('3000/') + 5);
             let lis = document.querySelector('nav').querySelectorAll('[role="menuitem"]');
             let li = [...lis].find(li => li.dataset.hash === `#${id}`);
+            let section = document.getElementById(id);
 
-            li.addEventListener('click', () => document.getElementById(`aside-${id}`).classList.toggle('hide'));
+            li.querySelector('a').addEventListener('click', () => {
+                let els = section.querySelectorAll('.el-wrap');
+
+                [...els].filter(el => el.classList.contains('hide')).
+                    forEach(el => el.classList.remove('hide'));
+                document.getElementById(`aside-${id}`).classList.toggle('hide');
+            });
 
             data.forEach(obj => {
                 let arrs = Object.values(obj.data);
@@ -342,9 +353,40 @@
             });
             arrG.forEach(arr => arr.forEach(el => genres.add(el)));
 
-            genres = [...genres];
             li.appendChild(this.muTools.sideLi(genres, id));
             /* genres = genres.filter((el, i, genres) => genres.indexOf(el) === i); */
+
+            this.onSubLiFilter(li, id);
+        }
+
+        onSubLiFilter(li, id) {
+            let subLis = li.querySelectorAll('li');
+            [...subLis].forEach(sLi => {
+                sLi.addEventListener('click', () => {
+                    let pArr = [...document.getElementById(id).getElementsByClassName('genre')];
+                    document.querySelector('main').scrollTop = 0;
+                    this.filterPage(sLi, pArr);
+                });
+            });
+        }
+
+        filterPage(sLi, pArr) {
+            let findText = sLi.querySelector('span').innerHTML;
+
+            let found = pArr.filter(p => p.innerHTML.indexOf(findText) > -1).
+                filter(p => p.innerHTML.indexOf(' ' + findText) < 0);
+            console.log(found);
+
+            pArr.forEach(p => {
+                let parent = p.parentNode.parentNode.classList;
+                if (found.includes(p)) {
+                    if (parent.contains('hide')) {
+                        parent.remove('hide');
+                    }
+                } else {
+                    parent.add('hide');
+                }
+            });
         }
 
         showElsOnHash() {
